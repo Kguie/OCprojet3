@@ -1,23 +1,39 @@
-// box-sizing() 
+// box-sizing()
 //
 // @param {string} $value Type of box-sizing, "border" or "content".
 //
 
 @mixin box-sizing($value: border) {
-    @if ($value == border) {
-        $value: border-box
-    }
+  @if ($value == border) {
+    $value: border-box;
+  }
 
-    @if ($value == content) {
-        $value: content-box
-    }
+  @if ($value == content) {
+    $value: content-box;
+  }
 
-    * {
-        box-sizing: $value;
+  * {
+    box-sizing: $value;
 
-        &::before,
-        &::after {
-            box-sizing: inherit;
-        }
+    &::before,
+    &::after {
+      box-sizing: inherit;
     }
+  }
 }
+
+//media queries
+
+@mixin tablet-only {
+  @media screen and (min-width: map-get($breakpoints, tablet)) {
+    @content;
+  }
+}
+
+@mixin desktop-only {
+  @media screen and (min-width: map-get($breakpoints, desktop)) {
+    @content;
+  }
+}
+
+

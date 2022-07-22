@@ -1,0 +1,19 @@
+.nav{
+    &__search{
+    display: flex;
+    height: 50px;
+    background-color: darken($clr-card,5%);
+    align-items: center;
+        &__form{
+            display: flex;
+            width: 162px;
+            margin: 0 auto;
+            justify-content: space-between;
+            &--location{
+                background-color: inherit;
+                border: none;
+                padding-left: 18px;
+            }
+        }
+    }
+}

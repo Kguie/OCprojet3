@@ -1,0 +1,38 @@
+.header {
+    display: flex;
+    height: 65px;
+    align-items: center;
+    background-color: aquamarine;
+    justify-content: space-around;
+    position: relative;
+    @include tablet-only{
+        justify-content: space-between;
+        padding-left: 100px;
+        padding-right: 100px;
+    }
+    &__logo{
+        display: inline-block;
+        width: $logo-width ;
+        height: 30px;
+    }
+    &--index-link {
+        position: absolute;
+        left: 23px;
+        @include tablet-only{
+           display: none;           
+        }
+        &--large {
+            display: none;
+            @include tablet-only{
+                display: block;
+            }
+        }
+    }
+    
+}
+
+.fa-arrow-left {
+    color: #000000;
+}
+
+
