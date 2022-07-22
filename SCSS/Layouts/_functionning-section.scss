@@ -1,0 +1,18 @@
+//partie fonctionnement
+.functionning{
+    &__title{
+        @include margin-tb(0,30px);
+    }
+    height: 440px;
+    padding-top: 40px;
+    @include padding-lr();
+    &__list{
+        display: flex;
+        flex-direction: column;
+        padding-left: 0;
+        @include tablet-only{
+            align-items: center;        
+            
+        }
+    }
+}

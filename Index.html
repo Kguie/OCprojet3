@@ -13,15 +13,43 @@
 			<img src="./assets/logo/ohmyfood.png" class="header__logo" alt="logo"/>
 		</header>
 
-		<!--Partie nav-->
-		<nav class="nav">
-			<div class="nav__search">
-			<form class="nav__search__form" method="post" action="http://traitement.php">
-				<span class="nav__search__form__l-dot"><i class="fa-solid fa-location-dot "></i></span>
-				<input type="search" class="nav__search__form--location" value="Paris, Belleville" name="location" />
-			</form>
-			</div>	
-			</nav>
+		
+		<main>
+			<!--section pour la recherche de restaurant avec le titre-->
+			<section class="search">
+				<div class="search--inner-shadow-top"></div>
+				<form class="search__form" method="post" action="http://traitement.php">
+					<span class="search__form__head">
+						<i class="fa-solid fa-location-dot "></i>
+						<input type="search" class="search__form__head--location" value="Paris, Belleville" name="location" />
+					</span>
+					<span class="search__form__presentation">
+						<h1 class="search__form__presentation__title">Réservez le menu qui vous convient</h1>
+						<P class="search__form__presentation__subhead">Découvrez des restaurants d'exception, sélectionnés par nos soins.</P>
+						<input class="search__form__presentation--btn" type="submit" value="Explorez nos restaurants" />
+					</span>
+				</form>
+			</section>
+			<!--section expliquant le fonctionnement du site-->
+			<section class="functionning">
+				<h2 class="functionning__title">Fonctionnement</h2>
+				<ol class="functionning__list">
+					<li class="functionning__list--card">
+						<span class="functionning__list--card__number"><i class="fa-solid fa-1 "></i></span>
+						<span class="functionning__list--card--icon"><i class="fa-solid fa-mobile-screen-button"></i></span>
+						<p class="functionning__list--card__title">Choisissez un restaurant</p>
+					</li>
+					<li class="functionning__list--card">
+						<span class="functionning__list--card__number"><i class="fa-solid fa-2 "></i></span>
+						<span class="functionning__list--card--icon"><i class="fa-solid fa-list"></i></span>
+						<p class="functionning__list--card__title">Composez votre menu</p></li>
+					<li class="functionning__list--card">
+						<span class="functionning__list--card__number"><i class="fa-solid fa-3 "></i></span>
+						<span class="functionning__list--card--icon"><i class="fa-solid fa-store"></i></span>
+						<p class="functionning__list--card__title">Dégustez au restaurant</p></li>	
+				</ol>
+			</section>
+		</main>
 	</div>
 </body>
 </html>

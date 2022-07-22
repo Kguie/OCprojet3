@@ -1,0 +1,7 @@
+//taille du conteneur dans body
+.container{ 
+    @include desktop-only{
+    max-width: 1440px;
+    margin: 0 auto;
+    }
+}

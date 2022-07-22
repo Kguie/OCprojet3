@@ -35,5 +35,47 @@
     @content;
   }
 }
+//mixin façlitant la mise en place des espaces et des distances entre parties
+@mixin padding-lr( $size : 5%) {
+  padding-left: $size;
+  padding-right: $size;
+}
+
+@mixin padding-tb( $top,$bottom){
+  padding-top: $top;
+  padding-bottom: $bottom;
+}
+
+
+@mixin margin-tb($top,$bottom) {
+  margin-top: $top;
+  margin-bottom: $bottom;
+}
+
+//mixin pour les boutons de formulaire
+
+@mixin btn($width :185px){
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+  height: 50px;
+  color: #ffffff ;
+  background: linear-gradient( 180deg, $clr-secondary,$clr-primary);
+  box-shadow: $shadow-card; 
+  border: none;
+  border-radius: 25px;
+  width: $width;
+  &:hover{
+    background-color: linear-gradient(180deg, lighten($clr-secondary,50%),lighten( $clr-primary,50%))
+  }
+  @media screen and (min-width: 768px) {
+    position: absolute;
+    right: 5%;
+    top: 11px;
+  }
+
+}
+
 
 

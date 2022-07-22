@@ -1,0 +1,75 @@
+.search {
+  position: relative;
+  &--inner-shadow-top {
+    box-shadow: inset 0 2px 2px 0 rgba(0, 0, 0, 0.2);
+    background-color: darken($clr-card, 3%);
+    height: 4px;
+    @include padding-lr();
+  }
+  &__form {
+    display: flex;
+    flex-direction: column;
+    background-color: darken($clr-card, 3%);
+    &__head {
+      display: flex;
+      width: 162px;
+      justify-content: space-between;
+      height: 46px;
+      margin: 0 auto;
+      align-items: center;
+      padding-bottom: 4px;
+      @include tablet-only {
+        height: 70px;
+        margin: 0 0 0 5%;
+      }
+      &--location {
+        background-color: inherit;
+        border: none;
+        padding-left: 18px;
+        &:focus{
+            outline: none;
+        }
+        @include tablet-only {
+          height: 90%;
+          width: 400px;
+        }
+      }
+    }
+    &__presentation {
+      display: flex;
+      flex-direction: column;
+      background-color: $clr-card;
+      align-items: center;
+      text-align: center;
+      justify-content: none;
+      height: 290px;
+      @include tablet-only {
+        align-items: flex-start;
+        height: 130px;
+      }
+      @include desktop-only {
+        background-color: #ffffff;
+      }
+      &__title {
+        @include padding-lr(17%);
+        @include margin-tb(40px, 20px);
+        @include tablet-only {
+          padding-left: 5%;
+          margin-top: 20px;
+        }
+      }
+      &__subhead {
+        @include padding-lr(10%);
+        @include margin-tb(0, 30px);
+        @include tablet-only {
+          padding-left: 5%;
+        }
+      }
+      &--btn {
+        @include margin-tb(0px, 0px);
+        @include btn(220px);
+      }
+    }
+  }
+}
+

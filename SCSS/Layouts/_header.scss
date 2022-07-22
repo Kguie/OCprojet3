@@ -10,11 +10,13 @@
         padding-left: 100px;
         padding-right: 100px;
     }
+    //logo
     &__logo{
         display: inline-block;
         width: $logo-width ;
         height: 30px;
     }
+    //lien vers Accueil
     &--index-link {
         position: absolute;
         left: 23px;
@@ -30,7 +32,7 @@
     }
     
 }
-
+//icone de flèche
 .fa-arrow-left {
     color: #000000;
 }

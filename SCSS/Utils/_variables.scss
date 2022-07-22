@@ -1,3 +1,4 @@
+//valeurs de breakpoints
 $breakpoints: (
     tablet:768px,
     desktop:992px,
@@ -12,7 +13,9 @@ $clr-tertiary: #99e2d0;
 $clr-card:#f7f7f7;
 
 
-
+//largeur du logo
 $logo-width: 160px;
 
+//proprités de box-shadow des cartes
+$shadow-card:(0 4px 8px 0 rgba(0, 0, 0, 0.2))
 

@@ -1,0 +1,56 @@
+//carte de la partie fonctionnement de l'accueil
+.functionning__list--card {
+  display: flex;
+  align-items: center;
+  height: 75px;
+  width: calc(100% - 10px);
+  padding-left: 0;
+  background-color: $clr-card;
+  box-shadow: $shadow-card;
+  border-radius: 20px;
+  align-self: flex-end;
+  margin-bottom: 25px;
+  position: relative;
+  padding-left: 10%;
+  padding-right: 25%;
+  @include tablet-only{
+    width:500px;
+    height: 100px;
+    align-self: center;
+    font-size: 1.3em;
+    margin-bottom: 50px;
+    @include padding-lr(30px);
+     
+  }
+  &:hover{
+    background-color:lighten($clr-primary, 35%)
+  }
+  &:hover .functionning__list--card--icon{
+    color: $clr-primary;
+  }
+  &__number {
+    display: flex;
+    font-size: 0.7em;
+    justify-content: space-around;
+    align-items: center;
+    border-radius: 50%;
+    width: 20px;
+    height: 20px;
+    background-color: $clr-primary;
+    color: white;
+    position: absolute;
+    left: -10px;
+  }
+  &__title{
+    margin-left: 20px;
+  }
+  &--icon{
+    display: inline-block;
+    color: grey;
+    margin: 0;
+    padding: 0;
+    @include tablet-only{
+      margin-right:60px;
+    }
+  }
+}
