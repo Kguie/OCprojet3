@@ -1,10 +1,16 @@
 //partie fonctionnement
 .functionning{
-    &__title{
-        @include margin-tb(0,30px);
-    }
     height: 440px;
     padding-top: 40px;
+    @include tablet-only {
+        height: auto;
+    }
+    &__title{
+        @include margin-tb(0,30px);
+        @include tablet-only{
+            margin-bottom: 60px;
+        }
+    }
     @include padding-lr();
     &__list{
         display: flex;

@@ -1,5 +1,7 @@
 //taille du conteneur dans body
 .container{ 
+    display: flex;
+    flex-direction: column;
     @include desktop-only{
     max-width: 1440px;
     margin: 0 auto;

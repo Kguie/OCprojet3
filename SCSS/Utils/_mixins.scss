@@ -66,8 +66,9 @@
   border: none;
   border-radius: 25px;
   width: $width;
+  cursor: pointer;
   &:hover{
-    background-color: linear-gradient(180deg, lighten($clr-secondary,50%),lighten( $clr-primary,50%))
+    background: linear-gradient(180deg, lighten($clr-secondary,10%),lighten( $clr-primary,10%))
   }
   @media screen and (min-width: 768px) {
     position: absolute;
@@ -76,6 +77,38 @@
   }
 
 }
+
+//Mise en place des checkboxes invisibles
+@mixin checkbox{
+  position: relative;
+  &__checkbox{
+  position: absolute;
+  opacity: 0;
+  cursor: pointer;
+  height:100%;
+  width: 100%;
+  }
+}
+
+//mixin photos restaurants
+@mixin restaurants($height){
+  @each $key,$value in $restaurants-list{
+    &--#{$key}{
+      $restaurants:map-get($restaurants-list,$key);
+      background: url("../assets/restaurants/#{$key}.jpg") ;
+      background-repeat: no-repeat;
+      height: 100%;
+      width: 100%;
+      background-size: 100% map-get($restaurants, bgsy);
+      background-position-y:map-get($restaurants, bgpy );  //fonctionne pour la note enchentée
+      display: flex;
+      flex-direction: column;
+      height: $height;
+      position: relative;
+    }
+  }
+}
+  
 
 
 

@@ -17,5 +17,35 @@ $clr-card:#f7f7f7;
 $logo-width: 160px;
 
 //proprités de box-shadow des cartes
-$shadow-card:(0 4px 8px 0 rgba(0, 0, 0, 0.2))
+$shadow-card:(0 4px 8px 0 rgba(0, 0, 0, 0.2));
 
+//dimension des cartes de présentation des restaurants
+
+$c-card-height:525px;    //container constitué de 2 cartes 
+$card-height:255px;
+$card-c-photo-height:175px;
+$card-description:80px;
+
+$card-border-radius:20px;
+
+
+// variables pour photos des restaurants
+
+$restaurants-list:(
+    la-palette-du-gout: (
+        bgsy: 130%,
+        bgpy: -50px,
+    ),
+    la-note-enchantee: (
+        bgsy: 225%,
+        bgpy: -130px,
+    ),
+    a-la-francaise: (
+        bgsy: 140%,
+        bgpy: -60px,
+    ),
+    le-delice-des-sens: (
+        bgsy: 120%,
+        bgpy: -35px,
+    )
+);
