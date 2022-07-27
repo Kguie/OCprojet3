@@ -451,176 +451,42 @@ h1 {
   font-size: 1.2em;
 }
 
-.functionning__list--card {
+.fa-heart {
+  font-size: 2em;
+}
+
+.search__form__presentation--btn {
+  margin-top: 0px;
+  margin-bottom: 0px;
   display: flex;
-  align-items: center;
-  height: 75px;
-  width: calc(100% - 10px);
-  padding-left: 0;
-  background-color: #f7f7f7;
-  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
-  border-radius: 20px;
-  align-self: flex-end;
-  margin-bottom: 25px;
-  position: relative;
-  padding-left: 10%;
-  padding-right: 25%;
-}
-@media screen and (min-width: 768px) {
-  .functionning__list--card {
-    width: 500px;
-    height: 100px;
-    align-self: center;
-    font-size: 1.3em;
-    margin-bottom: 50px;
-    padding-left: 30px;
-    padding-right: 30px;
-  }
-}
-.functionning__list--card:hover {
-  background-color: #f2eafb;
-}
-.functionning__list--card:hover .functionning__list--card--icon {
-  color: #9356dc;
-}
-.functionning__list--card__number {
-  display: flex;
-  font-size: 0.7em;
+  flex-direction: column;
   justify-content: space-around;
   align-items: center;
-  border-radius: 50%;
-  width: 20px;
-  height: 20px;
-  background-color: #9356dc;
-  color: white;
-  position: absolute;
-  left: -10px;
+  height: 50px;
+  color: #ffffff;
+  background: linear-gradient(180deg, #ff79da, #9356dc);
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+  border: none;
+  border-radius: 25px;
+  width: 220px;
+  cursor: pointer;
 }
-.functionning__list--card__title {
-  margin-left: 20px;
-}
-.functionning__list--card--icon {
-  display: inline-block;
-  color: grey;
-  margin: 0;
-  padding: 0;
+.search__form__presentation--btn:hover {
+  background: linear-gradient(180deg, #fface8, #ae80e5);
+  box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.5);
 }
 @media screen and (min-width: 768px) {
-  .functionning__list--card--icon {
-    margin-right: 60px;
+  .search__form__presentation--btn {
+    position: absolute;
+    right: 5%;
+    top: 11px;
   }
 }
 
-.restaurants__container__card {
-  display: flex;
-  flex-direction: column;
-  height: 48.5714285714%;
-  border-radius: 20px;
-  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
-  overflow: hidden;
-  position: relative;
-}
-.restaurants__container__card__link {
-  display: block;
-  position: absolute;
-  width: 100%;
-  height: 100%;
-  z-index: 1;
-}
-.restaurants__container__card__c-photo {
-  display: flex;
-  flex-direction: column;
-  height: 68.6274509804%;
-  position: relative;
-}
-.restaurants__container__card__c-photo--la-palette-du-gout {
-  background: url("../assets/restaurants/la-palette-du-gout.jpg");
-  background-repeat: no-repeat;
-  height: 100%;
-  width: 100%;
-  background-size: 100% 130%;
-  background-position-y: -50px;
-  display: flex;
-  flex-direction: column;
-  height: 70%;
-  position: relative;
-}
-.restaurants__container__card__c-photo--la-note-enchantee {
-  background: url("../assets/restaurants/la-note-enchantee.jpg");
-  background-repeat: no-repeat;
-  height: 100%;
-  width: 100%;
-  background-size: 100% 225%;
-  background-position-y: -130px;
-  display: flex;
-  flex-direction: column;
-  height: 70%;
-  position: relative;
-}
-.restaurants__container__card__c-photo--a-la-francaise {
-  background: url("../assets/restaurants/a-la-francaise.jpg");
-  background-repeat: no-repeat;
-  height: 100%;
-  width: 100%;
-  background-size: 100% 140%;
-  background-position-y: -60px;
-  display: flex;
-  flex-direction: column;
-  height: 70%;
-  position: relative;
-}
-.restaurants__container__card__c-photo--le-delice-des-sens {
-  background: url("../assets/restaurants/le-delice-des-sens.jpg");
-  background-repeat: no-repeat;
-  height: 100%;
-  width: 100%;
-  background-size: 100% 120%;
-  background-position-y: -35px;
-  display: flex;
-  flex-direction: column;
-  height: 70%;
-  position: relative;
-}
-.restaurants__container__card__c-photo--new-label {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  width: 80px;
-  height: 25px;
-  color: #32b091;
-  background-color: #99e2d0;
-  box-shadow: -1px 0 1px 1px #99e2d0;
-  position: absolute;
-  right: 10px;
-  top: -3px;
-}
-.restaurants__container__card__description {
-  display: flex;
-  height: 31.3725490196%;
-  justify-content: space-between;
-  align-items: center;
-  padding: 0 20px 5px 15px;
-  position: relative;
-}
-.restaurants__container__card__description__txt {
-  display: flex;
-  flex-direction: column;
-  height: 44px;
-  justify-content: space-between;
-}
-.restaurants__container__card__description__txt--name {
-  text-transform: capitalize;
-  margin-top: 0;
-  margin-bottom: 0;
-}
-.restaurants__container__card__description__txt--location {
-  margin-top: 0;
-  margin-bottom: 0;
-}
 .restaurants__container__card__description--fav {
   width: 30px;
   height: 30px;
-  margin-bottom: 15px;
+  margin-bottom: 10px;
   position: relative;
 }
 .restaurants__container__card__description--fav__checkbox {
@@ -637,7 +503,7 @@ h1 {
   display: none;
 }
 .restaurants__container__card__description--fav__checkbox:checked ~ label i:nth-child(2) {
-  display: inline-block;
+  display: flex;
 }
 
 section:nth-child(3) i {
@@ -646,9 +512,10 @@ section:nth-child(3) i {
   top: 14px;
 }
 
-.rainbow.fa-heart {
-  background: linear-gradient(180deg, #9356dc, #ff79da);
-  color: #fff;
+section:nth-child(3) .fa-solid {
+  background: -webkit-gradient(linear, left top, left bottom, from(#9356dc), to(#ff79da));
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
   display: none;
 }
 
@@ -717,6 +584,7 @@ section:nth-child(3) i {
   margin: 0 auto;
   align-items: center;
   padding-bottom: 4px;
+  color: #444444;
 }
 @media screen and (min-width: 768px) {
   .search__form__head {
@@ -781,32 +649,6 @@ section:nth-child(3) i {
     padding-left: 5%;
   }
 }
-.search__form__presentation--btn {
-  margin-top: 0px;
-  margin-bottom: 0px;
-  display: flex;
-  flex-direction: column;
-  justify-content: space-around;
-  align-items: center;
-  height: 50px;
-  color: #ffffff;
-  background: linear-gradient(180deg, #ff79da, #9356dc);
-  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
-  border: none;
-  border-radius: 25px;
-  width: 220px;
-  cursor: pointer;
-}
-.search__form__presentation--btn:hover {
-  background: linear-gradient(180deg, #fface8, #ae80e5);
-}
-@media screen and (min-width: 768px) {
-  .search__form__presentation--btn {
-    position: absolute;
-    right: 5%;
-    top: 11px;
-  }
-}
 
 .functionning {
   height: 440px;
@@ -838,6 +680,65 @@ section:nth-child(3) i {
     align-items: center;
   }
 }
+.functionning__list--card {
+  display: flex;
+  align-items: center;
+  height: 75px;
+  width: calc(100% - 10px);
+  padding-left: 0;
+  background-color: #f7f7f7;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+  border-radius: 20px;
+  align-self: flex-end;
+  margin-bottom: 25px;
+  position: relative;
+  padding-left: 10%;
+  padding-right: 25%;
+}
+@media screen and (min-width: 768px) {
+  .functionning__list--card {
+    width: 500px;
+    height: 100px;
+    align-self: center;
+    font-size: 1.3em;
+    margin-bottom: 50px;
+    padding-left: 30px;
+    padding-right: 30px;
+  }
+}
+.functionning__list--card:hover {
+  background-color: #f2eafb;
+}
+.functionning__list--card:hover .functionning__list--card--icon {
+  color: #9356dc;
+}
+.functionning__list--card__number {
+  display: flex;
+  font-size: 0.7em;
+  justify-content: space-around;
+  align-items: center;
+  border-radius: 50%;
+  width: 20px;
+  height: 20px;
+  background-color: #9356dc;
+  color: white;
+  position: absolute;
+  left: -10px;
+}
+.functionning__list--card__title {
+  margin-left: 20px;
+}
+.functionning__list--card--icon {
+  display: inline-block;
+  color: grey;
+  margin: 0;
+  padding: 0;
+}
+@media screen and (min-width: 768px) {
+  .functionning__list--card--icon {
+    margin-right: 60px;
+  }
+}
 
 .restaurants {
   height: 1225px;
@@ -847,9 +748,24 @@ section:nth-child(3) i {
   padding-top: 45px;
   margin-bottom: 0;
 }
+@media screen and (min-width: 768px) {
+  .restaurants {
+    height: fit-content;
+  }
+}
+@media screen and (min-width: 992px) {
+  .restaurants {
+    background-color: #fff;
+  }
+}
 .restaurants__title {
   margin-top: 0;
   margin-bottom: 20px;
+}
+@media screen and (min-width: 768px) {
+  .restaurants__title {
+    margin-bottom: 80px;
+  }
 }
 .restaurants__container {
   display: flex;
@@ -858,11 +774,161 @@ section:nth-child(3) i {
   margin-bottom: 18px;
   justify-content: space-between;
 }
+@media screen and (min-width: 768px) {
+  .restaurants__container {
+    flex-direction: row;
+    height: fit-content;
+    margin-bottom: 50px;
+  }
+}
+@media screen and (min-width: 992px) {
+  .restaurants__container {
+    margin-bottom: 100px;
+    justify-content: space-around;
+  }
+}
+.restaurants__container__card {
+  display: flex;
+  flex-direction: column;
+  height: 48.5714285714%;
+  border-radius: 20px;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+  overflow: hidden;
+  position: relative;
+}
+@media screen and (min-width: 768px) {
+  .restaurants__container__card {
+    width: 340px;
+    height: 255px;
+  }
+}
+@media screen and (min-width: 992px) {
+  .restaurants__container__card {
+    width: 430px;
+    height: 375px;
+  }
+  .restaurants__container__card:hover {
+    color: #9356dc;
+    box-shadow: 0 8px 16px 0 #f2eafb;
+  }
+}
+.restaurants__container__card__link {
+  display: block;
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  z-index: 1;
+}
+.restaurants__container__card__c-photo--la-palette-du-gout {
+  background: url("../assets/restaurants/la-palette-du-gout.jpg");
+  background-repeat: no-repeat;
+  background-size: 100% 130%;
+  background-position-y: -50px;
+  display: flex;
+  flex-direction: column;
+  height: 70%;
+  width: 100%;
+  position: relative;
+}
+@media screen and (min-width: 992px) {
+  .restaurants__container__card__c-photo--la-palette-du-gout {
+    background-position-y: -75px;
+  }
+}
+.restaurants__container__card__c-photo--la-note-enchantee {
+  background: url("../assets/restaurants/la-note-enchantee.jpg");
+  background-repeat: no-repeat;
+  background-size: 100% 225%;
+  background-position-y: -130px;
+  display: flex;
+  flex-direction: column;
+  height: 70%;
+  width: 100%;
+  position: relative;
+}
+@media screen and (min-width: 992px) {
+  .restaurants__container__card__c-photo--la-note-enchantee {
+    background-position-y: -200px;
+  }
+}
+.restaurants__container__card__c-photo--a-la-francaise {
+  background: url("../assets/restaurants/a-la-francaise.jpg");
+  background-repeat: no-repeat;
+  background-size: 100% 140%;
+  background-position-y: -60px;
+  display: flex;
+  flex-direction: column;
+  height: 70%;
+  width: 100%;
+  position: relative;
+}
+@media screen and (min-width: 992px) {
+  .restaurants__container__card__c-photo--a-la-francaise {
+    background-position-y: -80px;
+  }
+}
+.restaurants__container__card__c-photo--le-delice-des-sens {
+  background: url("../assets/restaurants/le-delice-des-sens.jpg");
+  background-repeat: no-repeat;
+  background-size: 100% 120%;
+  background-position-y: -35px;
+  display: flex;
+  flex-direction: column;
+  height: 70%;
+  width: 100%;
+  position: relative;
+}
+@media screen and (min-width: 992px) {
+  .restaurants__container__card__c-photo--le-delice-des-sens {
+    background-position-y: -50px;
+  }
+}
+.restaurants__container__card__c-photo--new-label {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 80px;
+  height: 25px;
+  color: #32b091;
+  background-color: #99e2d0;
+  box-shadow: -1px 0 1px 1px #99e2d0;
+  position: absolute;
+  right: 10px;
+  top: -3px;
+}
+.restaurants__container__card__description {
+  display: flex;
+  height: 31.3725490196%;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 20px 5px 15px;
+  position: relative;
+}
+.restaurants__container__card__description__txt {
+  display: flex;
+  flex-direction: column;
+  height: 44px;
+  justify-content: space-between;
+}
+.restaurants__container__card__description__txt--name {
+  text-transform: capitalize;
+  margin-top: 0;
+  margin-bottom: 0;
+}
+.restaurants__container__card__description__txt--location {
+  margin-top: 0;
+  margin-bottom: 0;
+}
 
 .footer {
   background-color: #444444;
   height: 200px;
   color: white;
+}
+@media screen and (min-width: 992px) {
+  .footer {
+    height: 150px;
+  }
 }
 .footer__container {
   width: 86.6666666667%;
@@ -875,12 +941,29 @@ section:nth-child(3) i {
   padding-left: 0;
   list-style-type: none;
 }
+@media screen and (min-width: 992px) {
+  .footer__container__list {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    margin-top: 30px;
+  }
+}
 .footer__container__list__item {
   margin-bottom: 10px;
 }
 .footer__container__list__item--link {
   text-decoration: none;
   color: white;
+}
+@media screen and (min-width: 992px) {
+  .footer__container__list__item--link:hover {
+    color: #9356dc;
+  }
+}
+
+footer i {
+  width: 20px;
 }
 
 .container {

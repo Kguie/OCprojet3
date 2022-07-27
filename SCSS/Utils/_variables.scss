@@ -12,7 +12,6 @@ $clr-tertiary: #99e2d0;
 
 $clr-card:#f7f7f7;
 
-
 //largeur du logo
 $logo-width: 160px;
 
@@ -35,17 +34,21 @@ $restaurants-list:(
     la-palette-du-gout: (
         bgsy: 130%,
         bgpy: -50px,
+        bgpy2: -75px,
     ),
     la-note-enchantee: (
         bgsy: 225%,
         bgpy: -130px,
+        bgpy2: -200px,
     ),
     a-la-francaise: (
         bgsy: 140%,
         bgpy: -60px,
+        bgpy2: -80px,
     ),
     le-delice-des-sens: (
         bgsy: 120%,
         bgpy: -35px,
+        bgpy2: -50px,
     )
 );

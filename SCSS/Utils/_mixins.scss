@@ -68,7 +68,8 @@
   width: $width;
   cursor: pointer;
   &:hover{
-    background: linear-gradient(180deg, lighten($clr-secondary,10%),lighten( $clr-primary,10%))
+    background: linear-gradient(180deg, lighten($clr-secondary,10%),lighten( $clr-primary,10%));
+    box-shadow:(0 8px 16px 0 rgba(0, 0, 0, 0.5));
   }
   @media screen and (min-width: 768px) {
     position: absolute;
@@ -91,20 +92,22 @@
 }
 
 //mixin photos restaurants
-@mixin restaurants($height){
+@mixin restaurants($height,$width){
   @each $key,$value in $restaurants-list{
     &--#{$key}{
       $restaurants:map-get($restaurants-list,$key);
       background: url("../assets/restaurants/#{$key}.jpg") ;
       background-repeat: no-repeat;
-      height: 100%;
-      width: 100%;
       background-size: 100% map-get($restaurants, bgsy);
       background-position-y:map-get($restaurants, bgpy );  //fonctionne pour la note enchentée
       display: flex;
       flex-direction: column;
       height: $height;
+      width: $width;
       position: relative;
+      @include desktop-only{
+        background-position-y: map-get($restaurants, bgpy2);
+      }
     }
   }
 }

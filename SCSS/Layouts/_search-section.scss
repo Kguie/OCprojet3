@@ -18,6 +18,7 @@
       margin: 0 auto;
       align-items: center;
       padding-bottom: 4px;
+      color: #444444;
       @include tablet-only {
         height: 70px;
         margin: 0 0 0 5%;
@@ -64,10 +65,6 @@
         @include tablet-only {
           padding-left: 5%;
         }
-      }
-      &--btn {
-        @include margin-tb(0px, 0px);
-        @include btn(220px);
       }
     }
   }

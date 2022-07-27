@@ -1,0 +1,41 @@
+//Bouton recherche de l'accueil
+.search__form__presentation--btn{
+    @include margin-tb(0px, 0px);
+    @include btn(220px);
+}
+
+
+//boutons coeur
+
+.restaurants__container__card__description--fav {
+    width: 30px;
+    height: 30px;
+    margin-bottom: 10px;
+    @include checkbox;
+
+    &__checkbox {
+      z-index: 2;
+      //Non fonctionnel animation à mettre en place
+      &:checked ~ label i:nth-child(1) {
+        display: none;
+      }
+      &:checked ~ label i:nth-child(2) {
+        display: flex;
+      }
+    }
+  }
+
+  //Icone favori
+section:nth-child(3) i{
+    position: absolute;
+    right: 5px;
+    top: 6px;
+  }
+  
+  section:nth-child(3) .fa-solid {
+    background: -webkit-gradient(linear, left top, left bottom, from($clr-primary), to($clr-secondary));
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    display: none;
+  }
+  
