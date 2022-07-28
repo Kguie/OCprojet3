@@ -38,6 +38,9 @@ h1{
 .menu h1{
     font-family: shrikhand;
     font-size: 1.7em;
+    @include desktop-only{
+        font-size: 2em;
+    }
 }
 
 .menu h2{
@@ -45,4 +48,6 @@ h1{
     font-weight: 300;
     text-transform: uppercase;
 }
+
+
 

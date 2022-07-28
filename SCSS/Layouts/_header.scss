@@ -1,39 +1,56 @@
 .header {
-    display: flex;
-    height: 65px;
-    align-items: center;
-    justify-content: space-around;
-    position: relative;
-    @include tablet-only{
-        justify-content: space-between;
-        padding-left: 100px;
-        padding-right: 100px;
+  display: flex;
+  height: 65px;
+  align-items: center;
+  justify-content: space-around;
+  position: relative;
+  @include tablet-only {
+    justify-content: space-between;
+    padding-left: 100px;
+    padding-right: 100px;
+  }
+  @include desktop-only {
+    height: 100px;
+    padding-top: 20px;
+  }
+  //logo
+  &__logo {
+    display: inline-block;
+    width: $logo-width;
+    height: 30px;
+  }
+  //lien vers Accueil
+  &--index-link {
+    position: absolute;
+    left: 23px;
+    @include desktop-only {
+      display: none;
     }
-    //logo
-    &__logo{
-        display: inline-block;
-        width: $logo-width ;
-        height: 30px;
-    }
-    //lien vers Accueil
-    &--index-link {
-        position: absolute;
-        left: 23px;
-        @include tablet-only{
-           display: none;           
+
+    &--large {
+        display: none;
+      & a {
+        text-decoration: none;
+        color: white;
+        border-radius: 25px;
+        box-shadow: $shadow-card;
+        border: none;
+        background-color: $clr-tertiary;
+        @include padding-lr(20px);
+        @include padding-tb(5px,5px);
+        cursor: pointer;
+        &:hover {
+            background:lighten($clr-tertiary, 10%);
+            box-shadow: (0 8px 16px 0 rgba(0, 0, 0, 0.5));
         }
-        &--large {
-            display: none;
-            @include tablet-only{
-                display: block;
-            }
-        }
+      }
+      @include desktop-only {
+        display: block;
+      }
     }
-    
+  }
 }
 //icone de flèche
 .fa-arrow-left {
-    color: #000000;
+  color: #000000;
 }
-
-

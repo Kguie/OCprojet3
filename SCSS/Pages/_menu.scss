@@ -1,0 +1,134 @@
+.main {
+  @include restaurants-background;
+}
+
+.menu {
+  display: flex;
+  flex-direction: column;
+  margin-top: 220px;
+  border-top-left-radius: 35px;
+  border-top-right-radius: 35px;
+  background-color: $clr-card;
+  padding-top: 20px;
+  padding-bottom: 70px;
+  @include tablet-only {
+    margin-top: 260px;
+  }
+  @include desktop-only {
+    margin-top: 400px;
+    border-radius: 0px;
+    background-color: white;
+    padding-left: 0;
+  }
+  @include padding-lr(4%);
+  &__head {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-left: 1%;
+    @include desktop-only {
+      position: absolute;
+      right: 1%;
+      top: 150px;
+      width: 385px;
+      font-size: 1em;
+    }
+    &--fav {
+      margin-right: 7%;
+      @include checkbox;
+      @include fav-animation;
+    }
+  }
+  &__body {
+    @each $var in $map-menu {
+      &__#{$var} {
+        margin-bottom: 45px;
+        @include desktop-only {
+          @include padding-lr(4%);
+          @include padding-tb(10px, 10px);
+          background-color: $clr-card;
+          border-radius: $card-border-radius;
+          box-shadow: $shadow-card;
+          width: 750px;
+          margin-left: 10px;
+        }
+        &__underline {
+          display: inline-block;
+          padding-bottom: 5px;
+          border-bottom: 3px solid $clr-tertiary;
+        }
+        &__title {
+          margin-left: 1%;
+          margin-bottom: 14px;
+        }
+        &__choice {
+          @include checkbox;
+          display: flex;
+          height: 70px;
+          border-radius: $card-border-radius;
+          background-color: white;
+          box-shadow: $shadow-card;
+          margin-bottom: 15px;
+          align-items: center;
+          overflow: hidden;
+          width: 100%;
+          @include desktop-only {
+            margin-bottom: 25px;
+            &:hover {
+              & .menu__body__#{$var}__choice--checked {
+                display: flex;
+              }
+            }
+          }
+          &__description {
+            display: flex;
+            justify-content: space-between;
+            align-items: flex-end;
+            width: 100%;
+            padding-left: 3%;
+            padding-right: 7%;
+            @include padding-tb(15px, 15px);
+            &__text {
+              white-space: nowrap;
+              max-width: 80%;
+
+              &__title {
+                font-size: 1.1em;
+                font-weight: 500;
+                overflow: hidden;
+                text-overflow: ellipsis;
+                @include margin-tb(10px, 5px);
+              }
+              &__subhead {
+                font-size: 0.9em;
+                overflow: hidden;
+                text-overflow: ellipsis;
+                @include margin-tb(0px, 10px);
+              }
+            }
+            &__price {
+              font-weight: 500;
+            }
+          }
+          &--checked {
+            display: none;
+            flex-basis: 19%;
+            min-width: 60px;
+            background-color: $clr-tertiary;
+            height: 100%;
+            justify-content: space-around;
+            align-items: center;
+            color: white;
+          }
+          &--checkbox {
+            &:checked {
+              & ~ .menu__body__#{$var}__choice--checked {
+                display: flex;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}
