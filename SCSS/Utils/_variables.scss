@@ -10,7 +10,7 @@ $clr-primary: #9356dc;
 $clr-secondary: #ff79da;
 $clr-tertiary: #99e2d0;
 
-$clr-card:#f7f7f7;
+$clr-card:#f1f1f1;
 
 //largeur du logo
 $logo-width: 160px;
@@ -52,3 +52,8 @@ $restaurants-list:(
         bgpy2: -50px,
     )
 );
+
+//menus
+$map-menu:(starter meal dessert);
+
+

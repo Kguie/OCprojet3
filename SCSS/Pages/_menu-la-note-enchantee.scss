@@ -1,0 +1,31 @@
+.main{
+   @include restaurants-background;
+}
+
+.menu{
+    display: flex;
+    flex-direction: column;
+    margin-top: 220px;
+    border-top-left-radius: 35px;
+    border-top-right-radius: 35px;
+    background-color: $clr-card;
+    padding-top: 20px;
+    height: 1280px;
+    @include padding-lr(4%);
+    &__head{
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding-left: 1%;
+        &--fav{
+            margin-right: 7%;
+            @include checkbox;
+            @include fav-animation;
+        }
+    }
+    &__body{
+        @include menu;
+    }
+}
+
+

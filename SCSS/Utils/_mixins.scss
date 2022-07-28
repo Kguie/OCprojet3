@@ -36,82 +36,169 @@
   }
 }
 //mixin façlitant la mise en place des espaces et des distances entre parties
-@mixin padding-lr( $size : 5%) {
+@mixin padding-lr($size: 5%) {
   padding-left: $size;
   padding-right: $size;
 }
 
-@mixin padding-tb( $top,$bottom){
+@mixin padding-tb($top, $bottom) {
   padding-top: $top;
   padding-bottom: $bottom;
 }
 
-
-@mixin margin-tb($top,$bottom) {
+@mixin margin-tb($top, $bottom) {
   margin-top: $top;
   margin-bottom: $bottom;
 }
 
 //mixin pour les boutons de formulaire
 
-@mixin btn($width :185px){
+@mixin btn($width: 185px) {
   display: flex;
   flex-direction: column;
   justify-content: space-around;
   align-items: center;
   height: 50px;
-  color: #ffffff ;
-  background: linear-gradient( 180deg, $clr-secondary,$clr-primary);
-  box-shadow: $shadow-card; 
+  color: #ffffff;
+  background: linear-gradient(180deg, $clr-secondary, $clr-primary);
+  box-shadow: $shadow-card;
   border: none;
   border-radius: 25px;
   width: $width;
   cursor: pointer;
-  &:hover{
-    background: linear-gradient(180deg, lighten($clr-secondary,10%),lighten( $clr-primary,10%));
-    box-shadow:(0 8px 16px 0 rgba(0, 0, 0, 0.5));
+  &:hover {
+    background: linear-gradient(
+      180deg,
+      lighten($clr-secondary, 10%),
+      lighten($clr-primary, 10%)
+    );
+    box-shadow: (0 8px 16px 0 rgba(0, 0, 0, 0.5));
   }
   @media screen and (min-width: 768px) {
     position: absolute;
     right: 5%;
     top: 11px;
   }
-
 }
 
 //Mise en place des checkboxes invisibles
-@mixin checkbox{
+@mixin checkbox {
   position: relative;
-  &__checkbox{
-  position: absolute;
-  opacity: 0;
-  cursor: pointer;
-  height:100%;
-  width: 100%;
+  &--checkbox {
+    position: absolute;
+    opacity: 0;
+    cursor: pointer;
+    height: 100%;
+    width: 100%;
+    z-index: 2;
+  }
+}
+@mixin fav-animation {
+  //Non fonctionnel animation à mettre en place
+  &--checkbox {
+    &:checked ~ label i:nth-child(1) {
+      display: none;
+    }
+    &:checked ~ label i:nth-child(2) {
+      display: flex;
+    }
   }
 }
 
 //mixin photos restaurants
-@mixin restaurants($height,$width){
-  @each $key,$value in $restaurants-list{
-    &--#{$key}{
-      $restaurants:map-get($restaurants-list,$key);
-      background: url("../assets/restaurants/#{$key}.jpg") ;
+@mixin restaurants($height, $width) {
+  @each $key, $value in $restaurants-list {
+    &--#{$key} {
+      $restaurants: map-get($restaurants-list, $key);
+      background: url("../assets/restaurants/#{$key}.jpg");
       background-repeat: no-repeat;
       background-size: 100% map-get($restaurants, bgsy);
-      background-position-y:map-get($restaurants, bgpy );  //fonctionne pour la note enchentée
+      background-position-y: map-get($restaurants, bgpy);
       display: flex;
       flex-direction: column;
       height: $height;
       width: $width;
       position: relative;
-      @include desktop-only{
+      @include desktop-only {
         background-position-y: map-get($restaurants, bgpy2);
       }
     }
   }
 }
-  
 
+@mixin restaurants-background {
+  @each $key, $value in $restaurants-list {
+    &--#{$key} {
+      background: url("../assets/restaurants/#{$key}.jpg");
+      background-repeat: no-repeat;
+      background-size: 100% 480px;
+      background-position-y: -90px;
+      display: flex;
+      flex-direction: column;
+      position: relative;
+    }
+  }
+}
 
-
+@mixin menu {
+  @each $var in $map-menu {
+    &__#{$var} {
+      margin-bottom: 45px;
+      &__underline {
+        display: inline-block;
+        padding-bottom: 5px;
+        border-bottom: 3px solid $clr-tertiary;
+      }
+      &__title {
+        margin-left: 1%;
+        margin-bottom: 14px;
+      }
+      &__choice {
+        @include checkbox;
+        display: flex;
+        height: 70px;
+        border-radius: $card-border-radius;
+        background-color: white;
+        box-shadow: $shadow-card;
+        margin-bottom: 15px;
+        align-items: center;
+        overflow: hidden;
+        &__description {
+          display: flex;
+          justify-content: space-between;
+          align-items: flex-end;
+          width: 100%;
+          padding-left: 3%;
+          padding-right: 7%;
+          @include padding-tb(15px, 15px);
+          &__text {
+            &__title {
+              font-size: 1.1em;
+              font-weight: 500;
+            }
+            &__subhead {
+              font-size: 0.9em;
+            }
+          }
+          &__price {
+            font-weight: 500;
+          }
+        }
+        &--checked {
+          display: none;
+          width: 19%;
+          background-color: $clr-tertiary;
+          height: 100%;
+          justify-content: space-around;
+          align-items: center;
+          color: white;
+        }
+        &--checkbox {
+          &:checked ~ .menu__body__#{$var}__choice--checked {
+            display: flex;
+          }
+        }
+      }
+    }
+  }
+}

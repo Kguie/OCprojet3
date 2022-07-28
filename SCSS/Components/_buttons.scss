@@ -5,6 +5,15 @@
 }
 
 
+//bouton commander
+.menu__body__btn-container{
+  display: flex;
+  justify-content: space-around;
+  &--btn{
+  @include btn(186px);
+  }
+}
+
 //boutons coeur
 
 .restaurants__container__card__description--fav {
@@ -12,30 +21,20 @@
     height: 30px;
     margin-bottom: 10px;
     @include checkbox;
-
-    &__checkbox {
-      z-index: 2;
-      //Non fonctionnel animation à mettre en place
-      &:checked ~ label i:nth-child(1) {
-        display: none;
-      }
-      &:checked ~ label i:nth-child(2) {
-        display: flex;
-      }
-    }
+    @include fav-animation;
   }
 
   //Icone favori
-section:nth-child(3) i{
+.restaurants i{
     position: absolute;
     right: 5px;
     top: 6px;
   }
   
-  section:nth-child(3) .fa-solid {
-    background: -webkit-gradient(linear, left top, left bottom, from($clr-primary), to($clr-secondary));
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
+  .fa-solid.fa-heart{
+    background: linear-gradient(180deg, $clr-primary,$clr-secondary);
+    background-clip: text;
+    color: transparent;
     display: none;
   }
   
