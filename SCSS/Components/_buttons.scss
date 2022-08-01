@@ -17,9 +17,9 @@
   &--btn{
   @include btn(186px);
   @include desktop-only{
-    position: fixed;
-    right: 2%;
-    bottom:295px;
+    position: absolute;
+    right: 4%;
+    top:585px;
   }
   }
 }
@@ -32,6 +32,18 @@
     margin-bottom: 10px;
     @include checkbox;
     @include fav-animation;
+    @include desktop-only{
+      &:hover{
+        label i:nth-child(1){
+          @include fav-heart(0ms);
+          animation-direction: normal;
+         }
+        label i:nth-child(2){
+          @include fav-heart(150ms);
+          animation-direction: reverse;
+        }
+      }
+    }
   }
 
   //Icone favori
@@ -40,11 +52,18 @@
     right: 5px;
     top: 6px;
   }
+
+  .menu .fa-heart{
+    position: absolute;
+
+  }
+
+
   
   .fa-solid.fa-heart{
     background: linear-gradient(180deg, $clr-primary,$clr-secondary);
     background-clip: text;
     color: transparent;
-    display: none;
+    opacity: 0;
   }
   

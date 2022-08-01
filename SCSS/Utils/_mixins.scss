@@ -66,16 +66,21 @@
   border-radius: 25px;
   width: $width;
   cursor: pointer;
+  
+  
+
   &:hover {
+    box-shadow: (0 8px 16px 0 rgba(0, 0, 0, 0.5));
     background: linear-gradient(
       180deg,
-      lighten($clr-secondary, 10%),
-      lighten($clr-primary, 10%)
+      lighten($clr-secondary, 8%),
+      lighten($clr-primary, 8%)
     );
-    box-shadow: (0 8px 16px 0 rgba(0, 0, 0, 0.5));
-  }
-  
+
+  }   
 }
+  
+
 
 //Mise en place des checkboxes invisibles
 @mixin checkbox {
@@ -94,10 +99,12 @@
 @mixin fav-animation {
    &--checkbox {
     &:checked ~ label i:nth-child(1) {
-      display: none;
+     @include fav-heart(0ms);
+     animation-direction: normal;
     }
     &:checked ~ label i:nth-child(2) {
-      display: flex;
+      @include fav-heart(150ms);
+      animation-direction: reverse;
     }
   }
 }
@@ -123,7 +130,7 @@
   }
 }
 
-//ajout de photos sur les pages de commande es restaurants
+//ajout de photos en background sur les pages de commande des restaurants
 @mixin restaurants-background {
   @each $key, $value in $restaurants-list {
     &--#{$key} {
@@ -139,7 +146,7 @@
         background-size: 100% 400px;
       }
       @include desktop-only{
-        background-size: 55% 400px;
+        background-size: 55% map-get($restaurants,bgsy3);
         background-position-x: 0 ;
         background-color: $clr-card;
         position: relative;
@@ -150,3 +157,10 @@
 
 
 
+@mixin spin-scale($delay) {
+  animation: spin 1400ms linear $delay forwards;
+}
+
+@mixin fav-heart($delay){
+  animation: fav 150ms ease-in-out $delay forwards;
+}

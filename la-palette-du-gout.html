@@ -1,22 +1,24 @@
 <!DOCTYPE html>
 <html lang="fr">
+
 <head>
-	<meta charset="utf-8">
-	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<meta charset="utf-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1" />
 	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css " />
 	<link rel="stylesheet" type="text/css" href="CSS/style.css" />
-   	<title>Menu - La palette du goût</title>
+	<title>Menu - La palette du goût</title>
 </head>
+
 <body>
 	<div class="container">
 		<header class="header">
-			<div class="header--index-link"><a href="index.html"><i class="fa-solid fa-arrow-left fa-lg"></i></a></div>     
-			<img src="./assets/logo/ohmyfood.png" class="header__logo" alt="logo"/>
+			<div class="header--index-link">
+				<a href="index.html"><i class="fa-solid fa-arrow-left fa-lg"></i></a>
+			</div>
+			<img src="assets/logo/ohmyfood.png" class="header__logo" alt="logo" />
 			<div class="header--index-link--large">
-				<a href="index.html">
-					Accueil
-				</a>
-			</div>   
+				<a href="index.html"> Accueil </a>
+			</div>
 		</header>
 		<main class="main--la-palette-du-gout">
 			<section class="menu">
@@ -26,151 +28,182 @@
 						<input type="checkbox" class="menu__head--fav--checkbox" id="la-palette-du-gout" />
 						<label for="la-palette-du-gout" class="menu__head--fav--checkbox--icon">
 							<i class="fa-regular fa-heart"></i>
-							<i class="fa-solid fa-heart "></i>
+							<i class="fa-solid fa-heart"></i>
 						</label>
 					</div>
 				</div>
 				<form class="menu__body" method="post" action="http://traitement.php">
 					<div class="menu__body__starter">
-						<h2 class="menu__body__starter__title"><span class="menu__body__starter__underline">
-								Entr</span>ées</h2>
+						<h2 class="menu__body__starter__title">
+							<span class="menu__body__starter__underline"> Entr</span>ées
+						</h2>
 						<div class="menu__body__starter__choice">
-							<div class="menu__body__starter__choice__description">
-								<div class="menu__body__starter__choice__description__text">
-									<p class="menu__body__starter__choice__description__text__title">Fricassée d'escargot</p>
-									<p class="menu__body__starter__choice__description__text__subhead">Au piment d'Espelette</p>
-								</div>
-								<p class="menu__body__starter__choice__description__price">25€</p>
-							</div>
 							<input type="checkbox" class="menu__body__starter__choice--checkbox"
-								id="fricassee-d-escargot" />
+								name="fricassee-d-escargot" id="fricassee-d-escargot" />
+							<div class="menu__body__starter__choice__text">
+								<p class="menu__body__starter__choice__text__title">
+									Fricassée d'escargot
+								</p>
+								<p class="menu__body__starter__choice__text__subhead">
+									Au piment d'Espelette
+								</p>
+							</div>
+							<p class="menu__body__starter__choice__price">25€</p>
+
 							<div class="menu__body__starter__choice--checked">
 								<i class="fa-solid fa-circle-check"></i>
 							</div>
 						</div>
 						<div class="menu__body__starter__choice">
-							<div class="menu__body__starter__choice__description">
-								<div class="menu__body__starter__choice__description__text">
-									<p class="menu__body__starter__choice__description__text__title">Foie gras de canard mi-cuit</p>
-									<p class="menu__body__starter__choice__description__text__subhead">Et ses copeaux de truffe noire</p>
-								</div>
-								<p class="menu__body__starter__choice__description__price">35€</p>
+							<input type="checkbox" class="menu__body__starter__choice--checkbox"
+								id="foie-gras-de-canard-mi-cuit" name="foie-gras-de-canard-mi-cuit" />
+							<div class="menu__body__starter__choice__text">
+								<p class="menu__body__starter__choice__text__title">
+									Foie gras de canard mi-cuit
+								</p>
+								<p class="menu__body__starter__choice__text__subhead">
+									Et ses copeaux de truffe noire
+								</p>
 							</div>
-							<input type="checkbox" class="menu__body__starter__choice--checkbox" id="foie-gras-de-canard-mi-cuit" />
+							<p class="menu__body__starter__choice__price">35€</p>
+
 							<div class="menu__body__starter__choice--checked">
 								<i class="fa-solid fa-circle-check"></i>
 							</div>
 						</div>
 						<div class="menu__body__starter__choice">
-							<div class="menu__body__starter__choice__description">
-								<div class="menu__body__starter__choice__description__text">
-									<p class="menu__body__starter__choice__description__text__title">Oeuf au plat</p>
-									<p class="menu__body__starter__choice__description__text__subhead">Assaisonné à la truffe sur lit de caviar</p>
-								</div>
-								<p class="menu__body__starter__choice__description__price">20€</p>
-							</div>
-							<input type="checkbox" class="menu__body__starter__choice--checkbox"
+							<input type="checkbox" class="menu__body__starter__choice--checkbox" name="oeuf-au-plat"
 								id="oeuf-au-plat" />
+							<div class="menu__body__starter__choice__text">
+								<p class="menu__body__starter__choice__text__title">
+									Oeuf au plat
+								</p>
+								<p class="menu__body__starter__choice__text__subhead">
+									Assaisonné à la truffe sur lit de caviar
+								</p>
+							</div>
+							<p class="menu__body__starter__choice__price">20€</p>
+
 							<div class="menu__body__starter__choice--checked">
 								<i class="fa-solid fa-circle-check"></i>
 							</div>
 						</div>
 					</div>
 					<div class="menu__body__meal">
-						<h2 class="menu__body__meal__title"><span class="menu__body__meal__underline"> Plat</span>s
+						<h2 class="menu__body__meal__title">
+							<span class="menu__body__meal__underline"> Plat</span>s
 						</h2>
 						<div class="menu__body__meal__choice">
-							<div class="menu__body__meal__choice__description">
-								<div class="menu__body__meal__choice__description__text">
-									<p class="menu__body__meal__choice__description__text__title">Filet de boeuf aux herbes
-									</p>
-									<p class="menu__body__meal__choice__description__text__subhead">Accompagné de sa ribambelle de légumes</p>
-								</div>
-								<p class="menu__body__meal__choice__description__price">40€</p>
-							</div>
 							<input type="checkbox" class="menu__body__meal__choice--checkbox"
-								id="filet-de-boeuf-aux-herbes" />
+								name="filet-de-boeuf-aux-herbes" id="filet-de-boeuf-aux-herbes" />
+							<div class="menu__body__meal__choice__text">
+								<p class="menu__body__meal__choice__text__title">
+									Filet de boeuf aux herbes
+								</p>
+								<p class="menu__body__meal__choice__text__subhead">
+									Accompagné de sa ribambelle de légumes
+								</p>
+							</div>
+							<p class="menu__body__meal__choice__price">40€</p>
+
 							<div class="menu__body__meal__choice--checked">
 								<i class="fa-solid fa-circle-check"></i>
 							</div>
 						</div>
 						<div class="menu__body__meal__choice">
-							<div class="menu__body__meal__choice__description">
-								<div class="menu__body__meal__choice__description__text">
-									<p class="menu__body__meal__choice__description__text__title">Parmentier de queue de boeuf</p>
-									<p class="menu__body__meal__choice__description__text__subhead">À la truffe noire sur sa purée de panais</p>
-								</div>
-								<p class="menu__body__meal__choice__description__price">35€</p>
+							<input type="checkbox" class="menu__body__meal__choice--checkbox"
+								id="parmentier-de-queue-de-boeuf" name="parmentier-de-queue-de-boeuf" />
+							<div class="menu__body__meal__choice__text">
+								<p class="menu__body__meal__choice__text__title">
+									Parmentier de queue de boeuf
+								</p>
+								<p class="menu__body__meal__choice__text__subhead">
+									À la truffe noire sur sa purée de panais
+								</p>
 							</div>
-							<input type="checkbox" class="menu__body__meal__choice--checkbox" id="parmentier-de-queue-de-boeuf" />
+							<p class="menu__body__meal__choice__price">35€</p>
+
 							<div class="menu__body__meal__choice--checked">
 								<i class="fa-solid fa-circle-check"></i>
 							</div>
 						</div>
 						<div class="menu__body__meal__choice">
-							<div class="menu__body__meal__choice__description">
-								<div class="menu__body__meal__choice__description__text">
-									<p class="menu__body__meal__choice__description__text__title">Filet de turbot</p>
-									<p class="menu__body__meal__choice__description__text__subhead">Aux agrumes</p>
-								</div>
-								<p class="menu__body__meal__choice__description__price">44€</p>
-							</div>
-							<input type="checkbox" class="menu__body__meal__choice--checkbox"
+							<input type="checkbox" class="menu__body__meal__choice--checkbox" name="filet-de-turbot"
 								id="filet-de-turbot" />
+							<div class="menu__body__meal__choice__text">
+								<p class="menu__body__meal__choice__text__title">
+									Filet de turbot
+								</p>
+								<p class="menu__body__meal__choice__text__subhead">
+									Aux agrumes
+								</p>
+							</div>
+							<p class="menu__body__meal__choice__price">44€</p>
+
 							<div class="menu__body__meal__choice--checked">
 								<i class="fa-solid fa-circle-check"></i>
 							</div>
 						</div>
 					</div>
 					<div class="menu__body__dessert">
-						<h2 class="menu__body__dessert__title"><span class="menu__body__dessert__underline">
-								Desse</span>rts
+						<h2 class="menu__body__dessert__title">
+							<span class="menu__body__dessert__underline"> Desse</span>rts
 						</h2>
 						<div class="menu__body__dessert__choice">
-							<div class="menu__body__dessert__choice__description">
-								<div class="menu__body__dessert__choice__description__text">
-									<p class="menu__body__dessert__choice__description__text__title">Paris-Brest
-									</p>
-									<p class="menu__body__dessert__choice__description__text__subhead">Revisité</p>
-								</div>
-								<p class="menu__body__dessert__choice__description__price">18€</p>
-							</div>
-							<input type="checkbox" class="menu__body__dessert__choice--checkbox"
+							<input type="checkbox" class="menu__body__dessert__choice--checkbox" name="paris-Brest"
 								id="paris-Brest" />
+							<div class="menu__body__dessert__choice__text">
+								<p class="menu__body__dessert__choice__text__title">
+									Paris-Brest
+								</p>
+								<p class="menu__body__dessert__choice__text__subhead">
+									Revisité
+								</p>
+							</div>
+							<p class="menu__body__dessert__choice__price">18€</p>
+
 							<div class="menu__body__dessert__choice--checked">
 								<i class="fa-solid fa-circle-check"></i>
 							</div>
 						</div>
 						<div class="menu__body__dessert__choice">
-							<div class="menu__body__dessert__choice__description">
-								<div class="menu__body__dessert__choice__description__text">
-									<p class="menu__body__dessert__choice__description__text__title">Macaron au chocolat d'exception </p>
-									<p class="menu__body__dessert__choice__description__text__subhead">Et glace à la vanille de Madagasca</p>
-								</div>
-								<p class="menu__body__dessert__choice__description__price">22€</p>
-							</div>
 							<input type="checkbox" class="menu__body__dessert__choice--checkbox"
-								id="macaron-au-chocolat-d-exception" />
+								name="macaron-au-chocolat-d-exception" id="macaron-au-chocolat-d-exception" />
+							<div class="menu__body__dessert__choice__text">
+								<p class="menu__body__dessert__choice__text__title">
+									Macaron au chocolat d'exception
+								</p>
+								<p class="menu__body__dessert__choice__text__subhead">
+									Et glace à la vanille de Madagascar
+								</p>
+							</div>
+							<p class="menu__body__dessert__choice__price">22€</p>
+
 							<div class="menu__body__dessert__choice--checked">
 								<i class="fa-solid fa-circle-check"></i>
 							</div>
 						</div>
 						<div class="menu__body__dessert__choice">
-							<div class="menu__body__dessert__choice__description">
-								<div class="menu__body__dessert__choice__description__text">
-									<p class="menu__body__dessert__choice__description__text__title">Mousse au chocolat</p>
-									<p class="menu__body__dessert__choice__description__text__subhead">Au piment d'Espelette et à la truffe noire</p>
-								</div>
-								<p class="menu__body__dessert__choice__description__price">23€</p>
+							<input type="checkbox" class="menu__body__dessert__choice--checkbox" id="mousse-au-chocolat"
+								name="mousse-au-chocolat" />
+							<div class="menu__body__dessert__choice__text">
+								<p class="menu__body__dessert__choice__text__title">
+									Mousse au chocolat
+								</p>
+								<p class="menu__body__dessert__choice__text__subhead">
+									Au piment d'Espelette et à la truffe noire
+								</p>
 							</div>
-							<input type="checkbox" class="menu__body__dessert__choice--checkbox"
-								id="mousse-au-chocolat" />
+							<p class="menu__body__dessert__choice__price">23€</p>
+
 							<div class="menu__body__dessert__choice--checked">
 								<i class="fa-solid fa-circle-check"></i>
 							</div>
 						</div>
 					</div>
-					<div class="menu__body__btn-container"> <input class="menu__body__btn-container--btn" type="submit" value="Commander"/></div>
+					<div class="menu__body__btn-container">
+						<input class="menu__body__btn-container--btn" type="submit" value="Commander" />
+					</div>
 				</form>
 			</section>
 		</main>
@@ -180,7 +213,8 @@
 				<ul class="footer__container__list">
 					<li class="footer__container__list__item">
 						<a href="#" class="footer__container__list__item--link">
-							<i class="fa-solid fa-utensils fa-xs"></i>Proposer un restaurant</a>
+							<i class="fa-solid fa-utensils fa-xs"></i>Proposer un
+							restaurant</a>
 					</li>
 					<li class="footer__container__list__item">
 						<a href="#" class="footer__container__list__item--link"><i

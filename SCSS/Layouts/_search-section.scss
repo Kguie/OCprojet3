@@ -42,15 +42,12 @@
       background-color: $clr-card;
       align-items: center;
       text-align: center;
-      justify-content: none;
       height: 290px;
       @include tablet-only {
         align-items: flex-start;
         height: 130px;
       }
-      @include desktop-only {
-        background-color: #ffffff;
-      }
+
       &__title {
         @include padding-lr(17%);
         @include margin-tb(40px, 20px);
