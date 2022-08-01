@@ -1,119 +1,130 @@
 //loader
-.loader{
-    opacity: 1;
-    position: absolute;
-    width: 100%;
-    height: 100%;
-    display: flex;
-    font-size:5em;
-    justify-content: center;
-    animation: linear 2800ms forwards;
-    
-
-
+.loader {
+  opacity: 1;
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  font-size: 5em;
+  justify-content: center;
+  animation: linear 2800ms forwards;
 }
 
-@keyframes loader{
-    90%{
-        opacity: 1;
-    }
-    100%{
-        opacity: 0;
-        
-    }
+@keyframes loader {
+  90% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+  }
 }
 
 .loader i {
-    position: absolute;
-    top: 22%; 
- }
-
- .loader i:nth-child(1){
-    color: $clr-primary;
-    @include spin-scale(0s);
-    opacity: 0;
- }
-
-
-.loader i:nth-child(2){
-    color: $clr-tertiary;
-    @include spin-scale(1400ms);
-    opacity: 0;
- }
-
- 
-
- @keyframes spin{
-    0%{
-        rotate: 0deg;
-        scale: 100%;
-        opacity:1;
-        
-    }
-    50%{
-        rotate:180deg;
-        scale: 120%;
-        ;
-        
-    }
-    95%{
-        opacity: 1;
-        ;
-    }
-    100%{
-        rotate:360deg;
-        scale: 100%;
-        opacity: 0;
-        ;
-    }
-    
- }
-
- 
-
-.container-index{
-animation: loading 2800ms forwards;
+  position: absolute;
+  top: 28%;
 }
 
-@keyframes loading{
-    0%{
-        transform: translateX(100%);
-          opacity: 0;  
-    }
-    95%{
-        transform: translateX(100%);
-        
-    }
-    96%{
-        transform: translateX(0%);
-          opacity: 0;
-    }
-    100%{
-        opacity: 1;
-    }
+.loader i:nth-child(1) {
+  color: $clr-primary;
+  @include spin-scale(0s);
+  opacity: 0;
 }
 
+.loader i:nth-child(2) {
+  color: $clr-tertiary;
+  @include spin-scale(1400ms);
+  opacity: 0;
+}
 
+@keyframes spin {
+  0% {
+    rotate: 0deg;
+    scale: 100%;
+    opacity: 1;
+  }
+  50% {
+    rotate: 180deg;
+    scale: 120%;
+  }
+  95% {
+    opacity: 1;
+  }
+  100% {
+    rotate: 360deg;
+    scale: 100%;
+    opacity: 0;
+  }
+}
+
+.container-index {
+  animation: loading 2800ms forwards;
+}
+
+@keyframes loading {
+  0% {
+    transform: translateX(100%);
+    opacity: 0;
+  }
+  95% {
+    transform: translateX(100%);
+  }
+  96% {
+    transform: translateX(0%);
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
 
 //animations boutons
 
-
-
 //animation heart
-@keyframes fav{
-    0%{
-        opacity: 1;
-        transform: scale(1);
-    }
-    20%{
-        transform: scale(1.5);
-    }
-    90%{
-        opacity: 1;
-    } 
-    100%{
-        opacity: 0;
-        transform: scale(0);
-    }   
-    
+@keyframes fav {
+  0% {
+    opacity: 1;
+    transform: scale(1);
+  }
+  20% {
+    transform: scale(1.5);
+  }
+  90% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+    transform: scale(0);
+  }
+}
+
+//animation Menu
+
+@keyframes menu-animation {
+  0% {
+    opacity: 0;
+    transform: translateX(-100%);
+  }
+  20% {
+    opacity: 0;
+    transform: translateX(-10%);
+  }
+  100% {
+    opacity: 1;
+    transform: translateX(0%);
+  }
+}
+
+@keyframes choice-animation {
+  0% {
+    opacity: 0;
+    transform: translateX(-100%);
+  }
+  20% {
+    opacity: 0;
+    transform: translateX(-10%);
+  }
+  100% {
+    opacity: 1;
+    transform: translateX(0%);
+  }
 }

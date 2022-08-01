@@ -1,5 +1,5 @@
 //taille du conteneur dans body
-.container{ 
+.container,.container-index{ 
     display: flex;
     flex-direction: column;
     @include desktop-only{

@@ -45,6 +45,11 @@
     @each $var in $map-menu {
       &__#{$var} {
         margin-bottom: 45px;
+        opacity: 1;
+        @include tablet-only{
+          animation: menu-animation 500ms forwards cubic-bezier(.09,1,.28,.86);
+          
+        }
         @include desktop-only {
           @include padding-lr(4%);
           @include padding-tb(10px, 10px);
@@ -75,6 +80,9 @@
           overflow: hidden;
           width: 100%;
           justify-content: space-between;
+          opacity: 0;
+          animation: choice-animation 200ms forwards ease-out;
+          @include choice-animation(200ms);
 
           @include desktop-only {
             margin-bottom: 25px;

@@ -66,8 +66,6 @@
   border-radius: 25px;
   width: $width;
   cursor: pointer;
-  
-  
 
   &:hover {
     box-shadow: (0 8px 16px 0 rgba(0, 0, 0, 0.5));
@@ -76,11 +74,8 @@
       lighten($clr-secondary, 8%),
       lighten($clr-primary, 8%)
     );
-
-  }   
+  }
 }
-  
-
 
 //Mise en place des checkboxes invisibles
 @mixin checkbox {
@@ -97,10 +92,10 @@
 
 //mise en place de l'effet favori
 @mixin fav-animation {
-   &--checkbox {
+  &--checkbox {
     &:checked ~ label i:nth-child(1) {
-     @include fav-heart(0ms);
-     animation-direction: normal;
+      @include fav-heart(0ms);
+      animation-direction: normal;
     }
     &:checked ~ label i:nth-child(2) {
       @include fav-heart(150ms);
@@ -114,7 +109,7 @@
   @each $key, $value in $restaurants-list {
     &--#{$key} {
       $restaurants: map-get($restaurants-list, $key);
-      background: url("../assets/restaurants/#{$key}.jpg");
+      background: url("../Assets/restaurants/#{$key}.jpg");
       background-repeat: no-repeat;
       background-size: 100% map-get($restaurants, bgsy);
       background-position-y: map-get($restaurants, bgpy);
@@ -135,19 +130,19 @@
   @each $key, $value in $restaurants-list {
     &--#{$key} {
       $restaurants: map-get($restaurants-list, $key);
-      background: url("../assets/restaurants/#{$key}.jpg");
+      background: url("../Assets/restaurants/#{$key}.jpg");
       background-repeat: no-repeat;
-      background-size: 100% map-get($restaurants,bgsy2);
-      background-position-y: map-get($restaurants,bgpy3);
+      background-size: 100% map-get($restaurants, bgsy2);
+      background-position-y: map-get($restaurants, bgpy3);
       display: flex;
       flex-direction: column;
-      
-      @include tablet-only{
+
+      @include tablet-only {
         background-size: 100% 400px;
       }
-      @include desktop-only{
-        background-size: 55% map-get($restaurants,bgsy3);
-        background-position-x: 0 ;
+      @include desktop-only {
+        background-size: 55% map-get($restaurants, bgsy3);
+        background-position-x: 0;
         background-color: $clr-card;
         position: relative;
       }
@@ -155,12 +150,18 @@
   }
 }
 
-
-
 @mixin spin-scale($delay) {
   animation: spin 1400ms linear $delay forwards;
 }
 
-@mixin fav-heart($delay){
+@mixin fav-heart($delay) {
   animation: fav 150ms ease-in-out $delay forwards;
+}
+
+@mixin choice-animation($anim-delay) {
+  @for $i from 1 through 4 {
+    &:nth-child(#{$i}) {
+      animation-delay: $anim-delay * $i;
+    }
+  }
 }
