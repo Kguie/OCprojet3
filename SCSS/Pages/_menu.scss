@@ -165,7 +165,7 @@
               & + .menu__body__#{$var}__choice__text {
                 white-space: nowrap;
                 max-width: 65%;
-                @include tablet-only{
+                @include desktop-only{
                 animation: choice-text 400ms forwards 140ms;
                 transform-origin: left;
                 }
