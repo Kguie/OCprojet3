@@ -39,6 +39,20 @@
       @include fav-animation;
       width: 23px;
       height: 23px;
+      @include desktop-only {
+        @include desktop-only {
+          &:hover {
+            label i:nth-child(1) {
+              @include fav-heart(0ms);
+              animation-direction: normal;
+            }
+            label i:nth-child(2) {
+              @include fav-heart(150ms);
+              animation-direction: reverse;
+            }
+          }
+        }
+      }
     }
   }
   &__body {
@@ -46,9 +60,9 @@
       &__#{$var} {
         margin-bottom: 45px;
         opacity: 1;
-        @include tablet-only{
-          animation: menu-animation 500ms forwards cubic-bezier(.09,1,.28,.86);
-          
+        @include tablet-only {
+          animation: menu-animation 500ms forwards
+            cubic-bezier(0.09, 1, 0.28, 0.86);
         }
         @include desktop-only {
           @include padding-lr(4%);
@@ -82,76 +96,79 @@
           justify-content: space-between;
           opacity: 0;
           animation: choice-animation 200ms forwards ease-out;
-          @include choice-animation(200ms);
+          @include choice-animation(100ms);
 
           @include desktop-only {
             margin-bottom: 25px;
             &:hover {
               & .menu__body__#{$var}__choice--checked {
                 display: flex;
+                animation: checked-animation 600ms forwards;
+                transform-origin: right;
               }
-              & .menu__body__#{$var}__choice__text{
-                white-space: nowrap;
-                max-width: 74%;
+              .menu__body__#{$var}__choice__price {
+                transform: scale(1.2) ;
+                transition: transform 600ms ;
                 
               }
             }
           }
-          
-           
-            &__text {
-              display: flex;
-              flex-direction: column;
-              
-              
-              padding-left: 3%;
-              
-              @include padding-tb(12px, 12px);
-              width: 82%;
-              
 
-              &__title {
-                font-size: 1.12em;
-                font-weight: 500;
-                overflow: hidden;
-                text-overflow: ellipsis;
-                @include margin-tb(0, 0);
-              }
-              &__subhead {
-                font-size: 0.924em;
-                overflow: hidden;
-                text-overflow: ellipsis;
-                white-space: nowrap;
-                @include margin-tb(5px,0);
-              }
-            }
-            &__price {
+          &__text {
+            display: flex;
+            flex-direction: column;
+
+            padding-left: 3%;
+
+            @include padding-tb(12px, 12px);
+            width: 82%;
+
+            &__title {
+              font-size: 1.13em;
               font-weight: 500;
-              margin-bottom: 12px;
-              padding-right: 15px;
-             
+              overflow: hidden;
+              text-overflow: ellipsis;
+              @include margin-tb(0, 0);
             }
-          
+            &__subhead {
+              font-size: 0.924em;
+              overflow: hidden;
+              text-overflow: ellipsis;
+              white-space: nowrap;
+              @include margin-tb(5px, 0);
+            }
+          }
+          &__price {
+            font-weight: 500;
+            margin-bottom: 12px;
+            padding-right: 15px;
+          }
+
           &--checked {
             display: none;
             flex-basis: 17%;
-            min-width: 60px;
+
             background-color: $clr-tertiary;
             min-height: 70px;
             justify-content: space-around;
             align-items: center;
             color: white;
-            
           }
           &--checkbox {
             &:checked {
               & ~ .menu__body__#{$var}__choice--checked {
                 display: flex;
+                animation: checked-animation 400ms forwards;
+                transform-origin: right;
               }
+
               & + .menu__body__#{$var}__choice__text {
                 white-space: nowrap;
                 max-width: 65%;
-                
+                @include tablet-only{
+                animation: choice-text 400ms forwards 140ms;
+                transform-origin: left;
+                }
               }
             }
           }
@@ -160,5 +177,3 @@
     }
   }
 }
-
-

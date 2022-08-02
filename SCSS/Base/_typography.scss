@@ -1,53 +1,48 @@
-@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;700&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Shrikhand&display=swap');
-
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Shrikhand&display=swap");
 
 body {
-    font-family: 'roboto', sans-serif;
+  font-family: "roboto", sans-serif;
 }
 
-h1{
-    font-size: 1.5em;
+h1 {
+  font-size: 1.5em;
 }
 
-.search__form__presentation__subhead{
-    font-size: 1.1em;
-    font-weight: 300;
+.search__form__presentation__subhead {
+  font-size: 1.1em;
+  font-weight: 300;
 }
 
-
-.restaurants__container__card__description__txt--name{
-    font-weight: 500;
-    font-size: 1.2em;
-    text-transform: capitalize;
+.restaurants__container__card__description__txt--name {
+  font-weight: 500;
+  font-size: 1.2em;
+  text-transform: capitalize;
 }
 
-.restaurants__container__card__description__txt--location{
-    font-weight: 300;
+.restaurants__container__card__description__txt--location {
+  font-weight: 300;
 }
 
-.footer__container__title{
-    font-family: shrikhand;
-    font-size: 1.2em;
+.footer__container__title {
+  font-family: shrikhand;
+  font-size: 1.2em;
 }
 
-.fa-heart{
-    font-size: 1.4em;
+.fa-heart {
+  font-size: 1.4em;
 }
 
-.menu h1{
-    font-family: shrikhand;
-    font-size: 1.7em;
-    @include desktop-only{
-        font-size: 2em;
-    }
+.menu h1 {
+  font-family: shrikhand;
+  font-size: 1.7em;
+  @include desktop-only {
+    font-size: 2em;
+  }
 }
 
-.menu h2{
-    font-size: 1em;
-    font-weight: 300;
-    text-transform: uppercase;
+.menu h2 {
+  font-size: 1em;
+  font-weight: 300;
+  text-transform: uppercase;
 }
-
-
-

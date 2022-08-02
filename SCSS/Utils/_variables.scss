@@ -1,68 +1,64 @@
 //valeurs de breakpoints
 $breakpoints: (
-    tablet:768px,
-    desktop:992px,
+  tablet: 768px,
+  desktop: 992px,
 );
-
 
 //colors
 $clr-primary: #9356dc;
 $clr-secondary: #ff79da;
 $clr-tertiary: #99e2d0;
 
-$clr-card:#f1f1f1;
+$clr-card: #f1f1f1;
 
 //largeur du logo
 $logo-width: 160px;
 
 //proprités de box-shadow des cartes
-$shadow-card:(0 4px 8px 0 rgba(0, 0, 0, 0.2));
+$shadow-card: (0 4px 8px 0 rgba(0, 0, 0, 0.2));
 
 //dimension des cartes de présentation des restaurants
 
-$c-card-height:525px;    //container constitué de 2 cartes 
-$card-height:255px;
-$card-c-photo-height:175px;
-$card-description:80px;
+$c-card-height: 525px; //container constitué de 2 cartes
+$card-height: 255px;
+$card-c-photo-height: 175px;
+$card-description: 80px;
 
-$card-border-radius:20px;
-
+$card-border-radius: 20px;
 
 // variables pour photos des restaurants
 
-$restaurants-list:(
-    la-palette-du-gout: (
-        bgsy: 130%,
-        bgsy2:260px,
-        bgsy3:400px,
-        bgpy: -50px,
-        bgpy2: -75px,
-    ),
-    la-note-enchantee: (
-        bgsy: 225%,
-        bgsy2:480px,
-        bgsy3:500px,
-        bgpy: -130px,
-        bgpy2: -200px,
-        bgpy3:-90px,
-    ),
-    a-la-francaise: (
-        bgsy: 140%,
-        bgsy2: 275px,
-        bgsy3:400px,
-        bgpy: -60px,
-        bgpy2: -80px,
-    ),
-    le-delice-des-sens: (
-        bgsy: 120%,
-        bgsy2: 275px,
-        bgsy3:400px,
-        bgpy: -35px,
-        bgpy2: -50px,
-    )
+$restaurants-list: (
+  la-palette-du-gout: (
+    bgsy: 130%,
+    bgsy2: 260px,
+    bgsy3: 400px,
+    bgpy: -50px,
+    bgpy2: -75px,
+  ),
+  la-note-enchantee: (
+    bgsy: 225%,
+    bgsy2: 480px,
+    bgsy3: 500px,
+    bgpy: -130px,
+    bgpy2: -200px,
+    bgpy3: -90px,
+  ),
+  a-la-francaise: (
+    bgsy: 140%,
+    bgsy2: 275px,
+    bgsy3: 400px,
+    bgpy: -60px,
+    bgpy2: -80px,
+  ),
+  le-delice-des-sens: (
+    bgsy: 120%,
+    bgsy2: 275px,
+    bgsy3: 400px,
+    bgpy: -35px,
+    bgpy2: -50px,
+  ),
 );
 
 //menus
-$map-menu:(starter meal dessert);
-
-
+$map-menu: (starter meal dessert);

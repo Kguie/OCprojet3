@@ -1,80 +1,106 @@
 //partie fonctionnement
-.functionning{
-    height: 440px;
-    padding-top: 40px;
+.functionning {
+  height: 440px;
+  padding-top: 40px;
+  @include tablet-only {
+    height: auto;
+  }
+  &__title {
+    @include margin-tb(0, 30px);
     @include tablet-only {
-        height: auto;
+      margin-bottom: 60px;
     }
-    &__title{
-        @include margin-tb(0,30px);
-        @include tablet-only{
-            margin-bottom: 60px;
-        }
+  }
+  @include padding-lr();
+  &__list {
+    display: flex;
+    flex-direction: column;
+    padding-left: 0;
+    @include tablet-only {
+      align-items: center;
     }
-    @include padding-lr();
-    &__list{
-        display: flex;
-        flex-direction: column;
-        padding-left: 0;
-        @include tablet-only{
-            align-items: center;        
-            
-        }
-        &--card {
-            display: flex;
-            align-items: center;
-            height: 75px;
-            width: calc(100% - 10px);
-            padding-left: 0;
-            background-color: $clr-card;
-            box-shadow: $shadow-card;
-            border-radius: $card-border-radius;
-            align-self: flex-end;
-            margin-bottom: 25px;
-            position: relative;
-            padding-left: 10%;
-            padding-right: 25%;
-            @include tablet-only {
-              width: 500px;
-              height: 100px;
-              align-self: center;
-              font-size: 1.3em;
-              margin-bottom: 50px;
-              @include padding-lr(30px);
-            }
-            &:hover {
-              background-color: lighten($clr-primary,35%);
-            }
-            &:hover .functionning__list--card--icon {
-              color: $clr-primary;
-            }
-            &__number {
-              display: flex;
-              font-size: 0.7em;
-              justify-content: space-around;
-              align-items: center;
-              border-radius: 50%;
-              width: 20px;
-              height: 20px;
-              background-color: $clr-primary;
-              color: white;
-              position: absolute;
-              left: -10px;
-            }
-            &__title {
-              margin-left: 20px;
-            }
-            &--icon {
-              display: inline-block;
-              color: grey;
-              margin: 0;
-              padding: 0;
-              @include tablet-only {
-                margin-right: 60px;
-              }
-            }
-          }
-          
+    &--card {
+      display: flex;
+      align-items: center;
+      height: 75px;
+      width: calc(100% - 10px);
+      padding-left: 0;
+      background-color: $clr-card;
+      box-shadow: $shadow-card;
+      border-radius: $card-border-radius;
+      align-self: flex-end;
+      margin-bottom: 25px;
+      position: relative;
 
+      z-index: 1;
+      @include tablet-only {
+        width: 500px;
+        height: 100px;
+        align-self: center;
+        font-size: 1.3em;
+        margin-bottom: 50px;
+      }
+
+      &:hover {
+        .functionning__list--card--mod {
+          opacity: 1;
+        }
+        .functionning__list--card--icon {
+          opacity: 0;
+        }
+      }
+      &--mod {
+        display: flex;
+        width: 100%;
+        height: 100%;
+        position: absolute;
+        color: $clr-primary;
+        background-color: lighten($clr-primary, 35%);
+        z-index: -1;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        border-radius: 20px;
+        opacity: 0;
+        transition: all 250ms;
+        .fa-solid {
+          position: absolute;
+          top: 39%;
+          left: 10%;
+          @include tablet-only {
+            left: 15%;
+          }
+        }
+      }
+
+      &__number {
+        display: flex;
+        font-size: 0.7em;
+        justify-content: space-around;
+        align-items: center;
+        border-radius: 50%;
+        width: 20px;
+        height: 20px;
+        background-color: $clr-primary;
+        color: white;
+        position: absolute;
+        left: -10px;
+      }
+      &__title {
+        margin-left: 20px;
+      }
+      &--icon {
+        display: inline-block;
+        color: grey;
+        margin-left: 10%;
+        padding: 0;
+        transition: opacity 250ms;
+        @include tablet-only {
+          margin-right: 60px;
+          margin-left: 15%;
+        }
+      }
     }
+  }
 }

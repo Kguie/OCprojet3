@@ -1,69 +1,64 @@
 //Bouton recherche de l'accueil
-.search__form__presentation--btn{
-    @include margin-tb(0px, 0px);
-    @include btn(220px);
-    @media screen and (min-width: 768px) {
-      position: absolute;
-      right: 5%;
-      top: 11px;
-    }
+.search__form__presentation--btn {
+  @include margin-tb(0px, 0px);
+  @include btn(220px);
+  @media screen and (min-width: 768px) {
+    position: absolute;
+    right: 5%;
+    top: 11px;
+  }
 }
 
-
 //bouton commander
-.menu__body__btn-container{
+.menu__body__btn-container {
   display: flex;
   justify-content: space-around;
-  &--btn{
-  @include btn(186px);
-  @include desktop-only{
-    position: absolute;
-    right: 4%;
-    top:585px;
-  }
+  &--btn {
+    @include btn(186px);
+    @include desktop-only {
+      position: absolute;
+      right: 1%;
+      top: 585px;
+    }
   }
 }
 
 //boutons coeur
 
 .restaurants__container__card__description--fav {
-    width: 30px;
-    height: 30px;
-    margin-bottom: 10px;
-    @include checkbox;
-    @include fav-animation;
-    @include desktop-only{
-      &:hover{
-        label i:nth-child(1){
-          @include fav-heart(0ms);
-          animation-direction: normal;
-         }
-        label i:nth-child(2){
-          @include fav-heart(150ms);
-          animation-direction: reverse;
-        }
+  width: 30px;
+  height: 30px;
+  margin-bottom: 10px;
+  @include checkbox;
+  @include fav-animation;
+  @include desktop-only {
+    &:hover {
+      label i:nth-child(1) {
+        @include fav-heart(0ms);
+        animation-direction: normal;
+      }
+      label i:nth-child(2) {
+        @include fav-heart(150ms);
+        animation-direction: reverse;
       }
     }
   }
+}
 
-  //Icone favori
-.restaurants i{
-    position: absolute;
-    right: 5px;
-    top: 6px;
-  }
+//Icone favori
+.restaurants i {
+  position: absolute;
+  right: 5px;
+  top: 6px;
+}
 
-  .menu .fa-heart{
-    position: absolute;
+.menu .fa-heart {
+  position: absolute;
+}
 
-  }
-
-
-  
-  .fa-solid.fa-heart{
-    background: linear-gradient(180deg, $clr-primary,$clr-secondary);
-    background-clip: text;
-    color: transparent;
-    opacity: 0;
-  }
-  
+.fa-solid.fa-heart {
+  background: linear-gradient(180deg, $clr-primary, $clr-secondary);
+  background-clip: text;
+  color: transparent;
+  opacity: 0;
+}

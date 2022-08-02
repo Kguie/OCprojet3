@@ -21,7 +21,7 @@
 
 .loader i {
   position: absolute;
-  top: 28%;
+  top: 38%;
 }
 
 .loader i:nth-child(1) {
@@ -38,20 +38,17 @@
 
 @keyframes spin {
   0% {
-    rotate: 0deg;
-    scale: 100%;
+    transform: rotate(0deg) scale(1);
     opacity: 1;
   }
   50% {
-    rotate: 180deg;
-    scale: 120%;
+    transform: rotate(180deg) scale(1.2);
   }
   95% {
     opacity: 1;
   }
   100% {
-    rotate: 360deg;
-    scale: 100%;
+    transform: rotate(360deg) scale(1);
     opacity: 0;
   }
 }
@@ -76,8 +73,6 @@
     opacity: 1;
   }
 }
-
-//animations boutons
 
 //animation heart
 @keyframes fav {
@@ -126,5 +121,34 @@
   100% {
     opacity: 1;
     transform: translateX(0%);
+  }
+}
+
+//animation Checkboxes menu
+
+@keyframes checked-animation {
+  0% {
+    transform: scaleX(0);
+    opacity: 1;
+  }
+  40% {
+    opacity: 1;
+    transform: scaleX(1.1);
+  }
+  100% {
+    opacity: 1;
+    transform: scaleX(1);
+  }
+}
+
+@keyframes choice-text{
+  0%{
+    transform: scaleX(.6);
+  }
+  40%{
+    transform: scaleX(1.1);
+  }
+  100%{
+    transform: scaleX(1);
   }
 }

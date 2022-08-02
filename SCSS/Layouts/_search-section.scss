@@ -27,8 +27,8 @@
         background-color: inherit;
         border: none;
         padding-left: 18px;
-        &:focus{
-            outline: none;
+        &:focus {
+          outline: none;
         }
         @include tablet-only {
           height: 90%;
@@ -66,4 +66,3 @@
     }
   }
 }
-
