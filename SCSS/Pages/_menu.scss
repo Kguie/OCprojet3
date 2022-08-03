@@ -31,7 +31,6 @@
       right: 1%;
       top: 150px;
       width: 385px;
-      font-size: 1em;
     }
     &--fav {
       margin-right: 7%;
@@ -107,9 +106,8 @@
                 transform-origin: right;
               }
               .menu__body__#{$var}__choice__price {
-                transform: scale(1.2) ;
-                transition: transform 600ms ;
-                
+                transform: scale(1.2);
+                transition: transform 600ms;
               }
             }
           }
@@ -117,29 +115,23 @@
           &__text {
             display: flex;
             flex-direction: column;
-
             padding-left: 3%;
-
             @include padding-tb(12px, 12px);
             width: 82%;
-
             &__title {
-              font-size: 1.13em;
-              font-weight: 500;
               overflow: hidden;
               text-overflow: ellipsis;
               @include margin-tb(0, 0);
             }
             &__subhead {
-              font-size: 0.924em;
               overflow: hidden;
               text-overflow: ellipsis;
               white-space: nowrap;
               @include margin-tb(5px, 0);
+              
             }
           }
           &__price {
-            font-weight: 500;
             margin-bottom: 12px;
             padding-right: 15px;
           }
@@ -147,7 +139,6 @@
           &--checked {
             display: none;
             flex-basis: 17%;
-
             background-color: $clr-tertiary;
             min-height: 70px;
             justify-content: space-around;
@@ -164,11 +155,14 @@
 
               & + .menu__body__#{$var}__choice__text {
                 white-space: nowrap;
-                max-width: 65%;
-                @include desktop-only{
-                animation: choice-text 400ms forwards 140ms;
-                transform-origin: left;
+                max-width: 64.7%;
+                @include desktop-only {
+                  animation: choice-text 400ms forwards 140ms;
+                  transform-origin: left;
                 }
+              }
+              & + .menu__body__#{$var}__choice__text p:nth-child(1) {
+               width: 93%;
               }
             }
           }

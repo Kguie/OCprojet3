@@ -41,8 +41,28 @@ h1 {
   }
 }
 
-.menu h2 {
-  font-size: 1em;
-  font-weight: 300;
-  text-transform: uppercase;
+.menu__body {
+  @each $var in $map-menu {
+    &__#{$var} {
+      &__title {
+        font-size: 1em;
+        font-weight: 300;
+        text-transform: uppercase;
+      }
+      &__choice {
+        &__text {
+          &__title {
+            font-size: 1.15em;
+            font-weight: 500;
+          }
+          &__subhead {
+            font-size: 0.924em;
+          }
+        }
+        &__price {
+          font-weight: 500;
+        }
+      }
+    }
+  }
 }
