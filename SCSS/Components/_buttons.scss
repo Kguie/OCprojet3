@@ -47,18 +47,18 @@
 
 //Icone favori
 .restaurants i {
-  position: absolute;
   right: 5px;
   top: 6px;
 }
 
-.menu .fa-heart {
+.fa-heart{
   position: absolute;
+  &.fa-solid{
+    background: linear-gradient(180deg, $clr-primary, $clr-secondary);
+    background-clip: text;
+    color: transparent;
+    opacity: 0;
+  }
 }
 
-.fa-solid.fa-heart {
-  background: linear-gradient(180deg, $clr-primary, $clr-secondary);
-  background-clip: text;
-  color: transparent;
-  opacity: 0;
-}
+

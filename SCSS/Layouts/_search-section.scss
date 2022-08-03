@@ -1,3 +1,4 @@
+//formulaire de recherche 
 .search {
   position: relative;
   &--inner-shadow-top {
@@ -36,6 +37,7 @@
         }
       }
     }
+    //partie présentation
     &__presentation {
       display: flex;
       flex-direction: column;

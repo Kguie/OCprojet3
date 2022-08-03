@@ -1,0 +1,30 @@
+.loader {
+  opacity: 1;
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  animation: linear 2800ms forwards;
+  i {
+    position: absolute;
+    top: 38%;
+    //Icone coeur vide
+    &:nth-child(1) {
+      color: $clr-primary;
+      @include spin-scale(0s);
+      opacity: 0;
+    }
+    //icone coeur rempli
+    &:nth-child(2) {
+      color: $clr-tertiary;
+      @include spin-scale(1400ms);
+      opacity: 0;
+    }
+  }
+}
+
+//disparition du loader
+.container-index {
+  animation: loading 2800ms forwards;
+}

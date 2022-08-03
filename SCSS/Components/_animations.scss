@@ -1,14 +1,5 @@
 //loader
-.loader {
-  opacity: 1;
-  position: absolute;
-  width: 100%;
-  height: 100%;
-  display: flex;
-  font-size: 5em;
-  justify-content: center;
-  animation: linear 2800ms forwards;
-}
+
 
 @keyframes loader {
   90% {
@@ -17,23 +8,6 @@
   100% {
     opacity: 0;
   }
-}
-
-.loader i {
-  position: absolute;
-  top: 38%;
-}
-
-.loader i:nth-child(1) {
-  color: $clr-primary;
-  @include spin-scale(0s);
-  opacity: 0;
-}
-
-.loader i:nth-child(2) {
-  color: $clr-tertiary;
-  @include spin-scale(1400ms);
-  opacity: 0;
 }
 
 @keyframes spin {
@@ -53,9 +27,7 @@
   }
 }
 
-.container-index {
-  animation: loading 2800ms forwards;
-}
+//apparition de la page d'accueil
 
 @keyframes loading {
   0% {
@@ -73,6 +45,7 @@
     opacity: 1;
   }
 }
+
 
 //animation heart
 @keyframes fav {
@@ -94,6 +67,7 @@
 
 //animation Menu
 
+//arrivée des parties entrée plat dessert
 @keyframes menu-animation {
   0% {
     opacity: 0;
@@ -109,6 +83,7 @@
   }
 }
 
+//arrivée des choix
 @keyframes choice-animation {
   0% {
     opacity: 0;
@@ -141,6 +116,7 @@
   }
 }
 
+//animation sur texte des menu en version desktop
 @keyframes choice-text{
   0%{
     transform: scaleX(.6);

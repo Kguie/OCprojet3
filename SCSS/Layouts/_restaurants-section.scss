@@ -86,7 +86,7 @@
         height: 100%;
         z-index: 2;
       }
-
+      //mixin ajoutant les photos en css
       &__c-photo {
         @include restaurants(70%, 100%);
 
