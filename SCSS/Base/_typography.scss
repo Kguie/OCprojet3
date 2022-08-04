@@ -5,9 +5,15 @@ body {
   font-family: "roboto", sans-serif;
 }
 
-h1 {
+
+.container-index h1 {
   font-size: 1.5em;
 }
+
+.loader{
+  font-size: 5em;
+}
+
 
 .search__form__presentation__subhead {
   font-size: 1.1em;
@@ -41,6 +47,8 @@ h1 {
 .fa-heart {
   font-size: 1.4em;
 }
+
+//page menu
 
 .menu h1 {
   font-family: shrikhand;
@@ -76,6 +84,3 @@ h1 {
   }
 }
 
-.loader{
-  font-size: 5em;
-}

@@ -7,6 +7,7 @@
 
   @include tablet-only {
     height: fit-content;
+    padding-bottom: 50px;
   }
 
   @include desktop-only {
