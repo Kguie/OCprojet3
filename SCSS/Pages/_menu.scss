@@ -107,7 +107,11 @@
           opacity: 0;
           animation: choice-animation 400ms forwards ease-out;
           @include choice-animation(100ms);
-
+          &:hover{
+            & .menu__body__#{$var}__choice--checked .fa-solid.fa-circle-check{
+              animation: circle 600ms forwards;
+            }
+          }
           @include desktop-only {
             margin-bottom: 25px;
             &:hover {
@@ -120,9 +124,7 @@
                 transform: scale(1.2);
                 transition: transform 600ms;
               }
-              & .menu__body__#{$var}__choice--checked .fa-solid.fa-circle-check{
-                animation: circle 600ms forwards;
-              }
+              
             }
           }
 
