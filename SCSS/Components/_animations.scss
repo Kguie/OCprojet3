@@ -71,15 +71,15 @@
 @keyframes menu-animation {
   0% {
     opacity: 0;
-    transform: translateX(-100%);
+    transform: translateY(30px);
   }
-  20% {
+  70%{
     opacity: 0;
-    transform: translateX(-10%);
   }
+ 
   100% {
     opacity: 1;
-    transform: translateX(0%);
+    transform: translateY(0%);
   }
 }
 
@@ -87,15 +87,12 @@
 @keyframes choice-animation {
   0% {
     opacity: 0;
-    transform: translateX(-100%);
+    transform: translateY(30px);
   }
-  20% {
-    opacity: 0;
-    transform: translateX(-10%);
-  }
+  
   100% {
     opacity: 1;
-    transform: translateX(0%);
+    transform: translateY(0%);
   }
 }
 
@@ -126,5 +123,16 @@
   }
   100%{
     transform: scaleX(1);
+  }
+}
+
+
+//animation rotation cercle coché
+@keyframes circle{
+  0%{
+    transform: rotate(0);
+  }
+  100% {
+    transform: rotate(360deg);
   }
 }
