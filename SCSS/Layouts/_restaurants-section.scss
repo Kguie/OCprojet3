@@ -79,6 +79,36 @@
           }
         }
       }
+      &__figcaption__like {
+        position: relative;
+        width: 22px;
+        height: 22px;
+        cursor: pointer;
+        z-index: 2;
+        margin-bottom: 2px;
+        @include checkbox;
+        &:hover .restaurants__container__card__figcaption__like__fullheart {
+          @include desktop-only {
+            opacity: 1;
+            transition: 400ms ease-in-out;
+          }
+        }
+        &--checkbox {
+          &:checked ~ .restaurants__container__card__figcaption__like__fullheart {
+            opacity: 1;
+            transition: 400ms ease-in-out;
+          }
+        }
+        &__emptyheart {
+          width: 22px;
+          position: absolute;
+        }
+        &__fullheart {
+          width: 22px;
+          position: absolute;
+          opacity: 0;
+        }
+      }
 
       &__link {
         display: block;
@@ -133,3 +163,4 @@
     }
   }
 }
+

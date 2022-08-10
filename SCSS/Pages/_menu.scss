@@ -26,33 +26,44 @@
     justify-content: space-between;
     align-items: center;
     padding-left: 1%;
+    &__figcaption__like {
+      position: relative;
+      width: 22px;
+      height: 22px;
+      cursor: pointer;
+      z-index: 2;
+      margin-bottom: 2px;
+      margin-right: 25px;
+      @include checkbox;
+      &:hover .menu__head__figcaption__like__fullheart {
+        @include desktop-only {
+          opacity: 1;
+          transition: 400ms ease-in-out;
+        }
+      }
+      &--checkbox {
+        &:checked ~ .menu__head__figcaption__like__fullheart {
+          opacity: 1;
+          transition: 400ms ease-in-out;
+        }
+      }
+      &__emptyheart {
+        width: 22px;
+        position: absolute;
+      }
+      &__fullheart {
+        width: 22px;
+        position: absolute;
+        opacity: 0;
+      }
+    }
     @include desktop-only {
       position: absolute;
       right: 1%;
       top: 150px;
       width: 385px;
     }
-    &--fav {
-      margin-right: 7%;
-      @include checkbox;
-      @include fav-animation;
-      width: 23px;
-      height: 23px;
-      @include desktop-only {
-        @include desktop-only {
-          &:hover {
-            label i:nth-child(1) {
-              @include fav-heart(0ms);
-              animation-direction: normal;
-            }
-            label i:nth-child(2) {
-              @include fav-heart(150ms);
-              animation-direction: reverse;
-            }
-          }
-        }
-      }
-    }
+    
   }
   &__body {
     @each $var in $map-menu {
@@ -174,3 +185,4 @@
     }
   }
 }
+
