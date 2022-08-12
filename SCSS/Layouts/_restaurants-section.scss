@@ -48,6 +48,11 @@
       box-shadow: $shadow-card;
       position: relative;
       z-index: 1;
+      transform: scale(1);
+      &:hover{
+        transform: scale(1.02);
+        transition: all 250ms ease-out;
+      }
 
       &::after {
         content: "";
@@ -75,7 +80,7 @@
         &:hover {
           &::after {
             opacity: 1;
-            transform: scaleX(1);
+            transition:all 250ms;
           }
         }
       }

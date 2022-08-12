@@ -11,6 +11,9 @@
     display: flex;
     flex-direction: column;
     background-color: darken($clr-card, 3%);
+    @include desktop-only{
+      flex-direction: column-reverse;
+    }
     &__head {
       display: flex;
       width: 162px;

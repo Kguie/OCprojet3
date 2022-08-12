@@ -12,6 +12,7 @@
   @include desktop-only {
     height: 150px;
     padding-top: 20px;
+    margin-bottom: 30px;
   }
   //logo
   &__logo {
@@ -37,8 +38,8 @@
         box-shadow: $shadow-card;
         border: none;
         background-color: $clr-tertiary;
-        @include padding-lr(20px);
-        @include padding-tb(5px, 5px);
+        @include padding-lr(25px);
+        @include padding-tb(10px, 10px);
         cursor: pointer;
         z-index: 1;
         &::after {

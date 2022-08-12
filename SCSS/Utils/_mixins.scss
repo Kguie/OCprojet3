@@ -172,6 +172,10 @@
         background-position-x: 0;
         position: relative;
         border-radius: 25px;
+        width: 80%;
+        align-self: center;
+        box-shadow: $shadow-card;
+        margin-bottom: 40px;
       }
     }
   }
