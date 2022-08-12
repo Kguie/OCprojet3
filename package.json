@@ -4,7 +4,7 @@
   "description": "oc projet 3",
   "main": "index.html",
   "scripts": {
-    "sass": "sass ./scss/main.scss:./css/style.css --style compressed -w",
+    "sass": "sass ./scss/main.scss:./css/style.css --style compressed ",
     "prefix": "postcss ./css/style.css --use autoprefixer -d ./css/prefixed/"
   },
   "repository": {

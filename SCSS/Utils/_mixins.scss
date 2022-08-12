@@ -168,10 +168,10 @@
         background-size: 100% 400px;
       }
       @include desktop-only {
-        background-size: 55% map-get($restaurants, bgsy3);
+        background-size: 100% map-get($restaurants, bgsy3);
         background-position-x: 0;
-        background-color: $clr-card;
         position: relative;
+        border-radius: 25px;
       }
     }
   }
