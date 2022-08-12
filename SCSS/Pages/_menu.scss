@@ -180,7 +180,7 @@
                 white-space: nowrap;
                 max-width: 64.7%;
                 @include desktop-only {
-                  animation: choice-text 400ms forwards 140ms;
+                  animation: choice-text 400ms forwards 80ms;
                   transform-origin: left;
                 }
               }
