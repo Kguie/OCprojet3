@@ -17,12 +17,11 @@
 
 ## Introduction 
 
-L'objectif ici est d'intégrer l'interface du site Booki avec du code HTML et SASS en mobile first tout en ajoutant des animations. 
+L'objectif ici est d'intégrer l'interface du site Oh my food avec du code HTML et SASS en mobile first tout en ajoutant des animations. 
 
 
 ## Installation
 
-- Prérequis système : Ce site est réalisé sous HTML et Sass.
 - Installation des dépendances : Cloner ce repository et lancer `yarn install` pour installer les dépendances.
 
 
