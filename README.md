@@ -12,7 +12,7 @@
 - [Auteurs](#auteurs)
 - [Exigences fonctionnelles](#exigences-fonctionnelles)
 - [Animations](#animations)
-
+- [Outils et contraintes techniques](#outils-et-contraintes-techniques)
 
 
 ## Introduction 
