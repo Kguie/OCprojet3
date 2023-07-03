@@ -5,20 +5,21 @@
   "main": "index.html",
   "scripts": {
     "sass": "sass ./scss/main.scss:./css/style.css --style compressed ",
-    "prefix": "postcss ./css/style.css --use autoprefixer -d ./css/prefixed/"
+    "prefix": "postcss ./css/style.css --use autoprefixer -d ./css/prefixed/",    
+    "start": "yarn live-server"
   },
   "repository": {
     "type": "git",
     "url": "git+https://github.com/Kguie/OCprojet3.git"
   },
   "author": "Guieba Kevin",
-  "license": "ISC",
   "bugs": {
     "url": "https://github.com/Kguie/OCprojet3/issues"
   },
   "homepage": "https://kguie.github.io/OCprojet3/",
   "dependencies": {
-    "@sass-collective/sass-box-sizing": "1.1.0",
-    "normalize-scss": "7.0.1"
+    "@sass-collective/sass-box-sizing": "^1.1.0",
+    "live-server": "^1.2.2",
+    "normalize-scss": "^7.0.1"
   }
 }
